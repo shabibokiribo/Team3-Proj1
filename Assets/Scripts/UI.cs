@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class UI : MonoBehaviour
 {
+    //UI
+    public Canvas Selection;
+
+    //on click character
+
+
     // Start is called before the first frame update
     void Start()
     {
