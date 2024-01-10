@@ -18,6 +18,9 @@ public class GabrielScr : MonoBehaviour
 
     public int potions = 3; //+10HP, +5MP
 
+    //Turns
+    public int movesLeft = 1; //subtracts when the complete an action
+
     // Start is called before the first frame update
     void Start()
     {

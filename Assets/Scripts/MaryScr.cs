@@ -15,6 +15,9 @@ public class MaryScr : MonoBehaviour
     public string move2 = "Sweeping Blow"; // Hits all enemies -15HP
     public string specialMove = "Rage"; // -5HP additional to all attacks, Take less 5 damage from hits, -40MP, Lasts 2 turns
 
+    //Turns
+    public int movesLeft = 1; //subtracts when the complete an action
+
     // Start is called before the first frame update
     void Start()
     {
