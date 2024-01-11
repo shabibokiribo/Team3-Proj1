@@ -205,7 +205,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 10848497}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 637766998}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: OnClickMove
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &10848497
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -908,7 +920,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 310406084}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 637766996}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &310406084
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,6 +983,7 @@ GameObject:
   - component: {fileID: 312289216}
   - component: {fileID: 312289215}
   - component: {fileID: 312289214}
+  - component: {fileID: 312289217}
   m_Layer: 5
   m_Name: Gabriel
   m_TagString: Untagged
@@ -1029,7 +1054,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 312289215}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 637766998}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: OnClickGabriel
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &312289215
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1068,6 +1105,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 312289212}
   m_CullTransparentMesh: 1
+--- !u!114 &312289217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312289212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9f9366472aac047a583716e2d4dc20, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 100
+  mp: 0
+  charName: Gabriel
+  move1: Slash
+  move2: Fire Slash
+  specialMove: Flury of Blows
+  potions: 3
+  movesLeft: 1
 --- !u!1 &411289234
 GameObject:
   m_ObjectHideFlags: 0
@@ -1363,7 +1420,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 445502355}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 637766998}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: OnClickItem
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &445502355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1743,7 +1812,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 559964244}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 637766998}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: OnClickSpecial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &559964244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1883,6 +1964,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 637766997}
+  - component: {fileID: 637766998}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1905,6 +1987,41 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &637766998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637766996}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c77add411c1c8540ac910794cd06d60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selection: {fileID: 433074743}
+  moves: {fileID: 725257880}
+  items: {fileID: 218826383}
+  special: {fileID: 2119621244}
+  move1Text: {fileID: 2113993902}
+  move2Text: {fileID: 1153314370}
+  move3Text: {fileID: 676543156}
+  specialText: {fileID: 700485930}
+  potionText: {fileID: 643521726}
+  specialErrorText: {fileID: 1877174454}
+  moveErrorText: {fileID: 1834019672}
+  potionErrorText: {fileID: 1795847095}
+  hpText: {fileID: 13867628}
+  mpText: {fileID: 1282555564}
+  mScript: {fileID: 1366030478}
+  fScript: {fileID: 1994516448}
+  gScript: {fileID: 312289217}
+  floydButton: {fileID: 1994516445}
+  maryButton: {fileID: 1366030475}
+  gabrielButton: {fileID: 312289214}
+  activeChar: 
+  selectedEnemy: {fileID: 0}
+  currentRound: 1
 --- !u!1 &643521724
 GameObject:
   m_ObjectHideFlags: 0
@@ -3108,7 +3225,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1013354929}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 637766998}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: OnClickBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1013354929
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3497,7 +3626,7 @@ GameObject:
   - component: {fileID: 1282555565}
   - component: {fileID: 1282555564}
   m_Layer: 5
-  m_Name: HPText (1)
+  m_Name: MPText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3825,7 +3954,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1337444677}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 637766998}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: OnClickMove2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1337444677
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4012,6 +4153,7 @@ GameObject:
   - component: {fileID: 1366030477}
   - component: {fileID: 1366030476}
   - component: {fileID: 1366030475}
+  - component: {fileID: 1366030478}
   m_Layer: 5
   m_Name: Mary
   m_TagString: Untagged
@@ -4082,7 +4224,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1366030476}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 637766998}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: OnClickMary
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1366030476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4121,6 +4275,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1366030473}
   m_CullTransparentMesh: 1
+--- !u!114 &1366030478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366030473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a8e7077c1425314f9057a16a077e5c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 130
+  mp: 0
+  charName: Mary
+  move1: Pound
+  move2: Sweeping Blow
+  specialMove: Rage
+  movesLeft: 1
 --- !u!1 &1433531399
 GameObject:
   m_ObjectHideFlags: 0
@@ -4496,7 +4669,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1619212150}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 637766998}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: OnClickBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1619212150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4692,7 +4877,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1726852603}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 637766998}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: OnClickBack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1726852603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5217,7 +5414,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1875861201}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 637766998}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: OnClickMove1
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1875861201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5538,6 +5747,7 @@ GameObject:
   - component: {fileID: 1994516447}
   - component: {fileID: 1994516446}
   - component: {fileID: 1994516445}
+  - component: {fileID: 1994516448}
   m_Layer: 5
   m_Name: Floyd
   m_TagString: Untagged
@@ -5608,7 +5818,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1994516446}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 637766998}
+        m_TargetAssemblyTypeName: UI, Assembly-CSharp
+        m_MethodName: OnClickFloyd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1994516446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5647,6 +5869,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1994516443}
   m_CullTransparentMesh: 1
+--- !u!114 &1994516448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1994516443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c353d16ec312ea43acc35cced6fbf83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hp: 75
+  mp: 0
+  charName: Floyd
+  move1: Weak Strike
+  move2: Heal
+  move3: Water Attack
+  specialMove: Mass Heal
+  potions: 3
+  movesLeft: 1
 --- !u!1 &2113993900
 GameObject:
   m_ObjectHideFlags: 0
