@@ -19,4 +19,9 @@ public class ManaBar : MonoBehaviour
         slidey.value = mana; // adjust the value of the 
        
     }
+
+    public void CurrentValue(int val)
+    {
+        slidey.value = val;
+    }
 }

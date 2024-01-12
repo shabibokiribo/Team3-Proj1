@@ -37,8 +37,6 @@ public class UI : MonoBehaviour
     public Button maryButton;
     public Button gabrielButton;
 
-    public Button move3;
-
     //Active Character and Enemy
     public string activeChar;
     public GameObject selectedEnemy;
@@ -86,7 +84,6 @@ public class UI : MonoBehaviour
             move1Text.text = fScript.move1;
             move2Text.text = fScript.move2;
             move3Text.text = fScript.move3;
-            move3.interactable = true;
 
             specialText.text = fScript.specialMove;
             potionText.text = "Potions Left: " + fScript.potions;
@@ -110,7 +107,6 @@ public class UI : MonoBehaviour
 
             move1Text.text = mScript.move1;
             move2Text.text = mScript.move2;
-            move3.interactable = false;
             move3Text.text = "";
 
             specialText.text = mScript.specialMove;
@@ -135,9 +131,7 @@ public class UI : MonoBehaviour
 
             move1Text.text = gScript.move1;
             move2Text.text = gScript.move2;
-            move3.interactable = false;
             move3Text.text = "";
-            
 
             specialText.text = gScript.specialMove;
             potionText.text = "Potions Left: " + gScript.potions;
