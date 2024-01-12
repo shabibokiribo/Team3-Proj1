@@ -7,7 +7,7 @@ public class ButtScript : MonoBehaviour
 {
     public void OnClickStart()
     {
-        SceneManager.LoadScene("LevelOne");
+        SceneManager.LoadScene("Level1");
     }
 
     public void OnClickHelp()
