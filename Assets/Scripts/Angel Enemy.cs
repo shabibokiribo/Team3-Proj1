@@ -37,10 +37,10 @@ public class AngelEnemy : MonoBehaviour
     void Start()
     {
         currentHealth = hp; //set current health to max health at the start of the game
-        healthBar.SetMaxHealth(hp); //set Mary's max health to hp (130)
+        healthBar.SetMaxHealth(hp); //set Angel's max health to hp (50)
 
        
-        manaBar.SetMaxMana(40); //set Mary's max mana to 40
+        manaBar.SetMaxMana(40); //set Angel's max mana to 40
 
         manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
