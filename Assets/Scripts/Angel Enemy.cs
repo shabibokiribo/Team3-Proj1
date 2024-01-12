@@ -2,21 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MaryScr : MonoBehaviour
+public class AngelEnemy : MonoBehaviour
 {
+  public FloydScr floyd; //reference to Floyd script
 
-    //Health Bar
+
+  public bool isAttacked; //true if angel is attacked 
+
+
+
+  //Health Bar
     public HealthBar healthBar; //reference to Health Bar script
 
     // Mana Bar
     public ManaBar manaBar; //reference to Mana Bar script
 
     //Character Stats
-    public int hp = 130; //max health is 130
+    public int hp = 50; //max health is 50
     public int mp = 0; //max 40, Increases +10 per turn
     public int currentHealth; //store character's current health
     public int currentMana; //store character's current Mana 
-    public string charName = "Mary";
+    public string charName = "Angel";
 
     //MOVESET
     public string move1 = "Pound"; // -25HP
@@ -43,17 +49,9 @@ public class MaryScr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) ) // TESTING: when the spacebar is pressed, take 20 damage 
-        {
-            TakeDamage(20);
-        }
-
-        if (Input.GetKeyDown(KeyCode.M) ) // TESTING: when the spacebar is pressed, take 20 damage 
-        {
-            Debug.Log("The M key was pressed");
-            GainMana(); // TESTING: when 'M' is pressed, gain 20 mana
-        }
+        if()
     }
+
 
     void TakeDamage(int damage) //take a certain amount of damage
     {
@@ -67,10 +65,5 @@ public class MaryScr : MonoBehaviour
         currentMana += 10;
 
         manaBar.SetMana(currentMana); //update mana bar to match the character's current mana status
-    }
-
-    void Attack(move)
-    {
-
     }
 }

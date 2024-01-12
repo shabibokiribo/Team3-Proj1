@@ -5,9 +5,18 @@ using UnityEngine;
 
 public class GabrielScr : MonoBehaviour
 {
+
+ //Health Bar
+    public HealthBar healthBar; //reference to Health Bar script
+
+    // Mana Bar
+    public ManaBar manaBar; //reference to Mana Bar script
+
     //Character Stats
     public int hp = 100; //max 100
     public int mp = 0; //max 50 , Increases +10 per turn
+    public int currentHealth; //store character's current health
+    public int currentMana; //store character's current Mana 
 
     public string charName = "Gabriel";
 
@@ -24,12 +33,41 @@ public class GabrielScr : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentHealth = hp; //set current health to max health at the start of the game
+        healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
+
+       
+        manaBar.SetMaxMana(50); //set Gabriel's max mana to 50
+
+        manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
     }
 
-    // Update is called once per frame
+// Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Space) ) // TESTING: when the spacebar is pressed, take 20 damage 
+        {
+            TakeDamage(20);
+        }
+
+        if (Input.GetKeyDown(KeyCode.M) ) // TESTING: when the spacebar is pressed, take 20 damage 
+        {
+            Debug.Log("The M key was pressed");
+            GainMana(); // TESTING: when 'M' is pressed, gain 20 mana
+        }
+    }
+
+    void TakeDamage(int damage) //take a certain amount of damage
+    {
+        currentHealth -= damage;
+
+        healthBar.SetHealth(currentHealth); //update health bar to match the character's current health
+    }
+
+    void GainMana() //gain a certain amount of mana  (should increase by 10 after each turn ends)
+    {
+        currentMana += 10;
+
+        manaBar.SetMana(currentMana); //update mana bar to match the character's current mana status
     }
 }
