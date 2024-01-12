@@ -69,8 +69,10 @@ public class MaryScr : MonoBehaviour
         manaBar.SetMana(currentMana); //update mana bar to match the character's current mana status
     }
 
-    void Attack(move)
-    {
+    //BUTTONS
 
+    public void OnClickSelectMary()
+    {
+        Debug.Log("Mary is selected");
     }
 }

@@ -51,16 +51,7 @@ public class FloydScr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) ) // TESTING: when the spacebar is pressed, take 20 damage 
-        {
-            TakeDamage(20);
-        }
-
-        if (Input.GetKeyDown(KeyCode.M) ) // TESTING: when the spacebar is pressed, take 20 damage 
-        {
-            Debug.Log("The M key was pressed");
-            GainMana(); // TESTING: when 'M' is pressed, gain 20 mana
-        }
+        
     }
      
 
