@@ -58,7 +58,13 @@ public class UI : MonoBehaviour
     public Scene scene;
     public string sceneName;
 
-    //on click character
+    public TMP_Text roundText;
+
+    //Sprites
+    public Sprite gStanding;
+    public Sprite gMove1;
+    public Sprite gMove2;
+    public Sprite gSpecial;
 
 
     // Start is called before the first frame update
@@ -76,11 +82,10 @@ public class UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        roundText.text = "Round " + currentRound;
     }
 
     
-
     //Moves goes down if character action is selected, if statement to see what active character it is so we can see if all characters have no moves then move on to next thing. idk.
     //check which character move it is so it does the appropriate amount of damage.
     //check if active character has moves left and then make the other buttons interactable.
@@ -99,8 +104,6 @@ public class UI : MonoBehaviour
     {
         selectedEnemy = "Enemy3";
     }
-
-
 
     public void OnClickFloyd()
     {
@@ -190,6 +193,58 @@ public class UI : MonoBehaviour
     {
         selection.gameObject.SetActive(false);
         special.gameObject.SetActive(true);
+
+        switch (activeChar)
+        {
+            case "Floyd":
+                fScript.movesLeft--;
+                maryButton.interactable = true;
+                gabrielButton.interactable = true;
+
+                fScript.TakeDamage(-25);
+                gScript.TakeDamage(-25);
+                mScript.TakeDamage(-25);
+
+                fScript.GainMana(-40);
+
+                //give  hp to party (25) & take 40 mana from floyd
+                break;
+            case "Gabriel":
+                gScript.movesLeft--;
+                maryButton.interactable = true;
+                floydButton.interactable = true;
+
+                gabrielButton.GetComponent<SpriteRenderer>().sprite = gSpecial;
+
+                if (selectedEnemy == "Enemy1")
+                {
+                    enemy1Scr.TakeDamage(35);
+                }
+                if (selectedEnemy == "Enemy2")
+                {
+                    enemy2Scr.TakeDamage(35);
+                }
+                if (selectedEnemy == "Enemy3")
+                {
+                    enemy3Scr.TakeDamage(35);
+                }
+
+                gScript.GainMana(-40);
+
+                //take hp from enemy (-35) &  take 40 mana
+                break;
+            case "Mary":
+                mScript.movesLeft--;
+                floydButton.interactable = true;
+                gabrielButton.interactable = true;
+
+                // -5HP additional to all attacks, Take less 5 damage from hits, -40MP, Lasts 2 turns
+
+                break;
+
+
+        }
+        TurnReset();
     }
 
     public void OnClickBack()
@@ -229,6 +284,8 @@ public class UI : MonoBehaviour
                 maryButton.interactable = true;
                 floydButton.interactable = true;
 
+                gabrielButton.GetComponent<SpriteRenderer>().sprite = gMove1;
+
                 if (selectedEnemy == "Enemy1")
                 {
                     enemy1Scr.TakeDamage(15);
@@ -264,7 +321,10 @@ public class UI : MonoBehaviour
 
                 //take hp from enemy (-25)
                 break;
+
+            
         }
+        TurnReset();
     }
 
     public void OnClickMove2()
@@ -284,6 +344,8 @@ public class UI : MonoBehaviour
                 gScript.movesLeft--;
                 maryButton.interactable = true;
                 floydButton.interactable = true;
+
+                gabrielButton.GetComponent<SpriteRenderer>().sprite = gMove2;
 
                 gScript.GainMana(-10);
 
@@ -314,6 +376,7 @@ public class UI : MonoBehaviour
 
                 break;
         }
+        TurnReset();
     }
 
     public void OnClickMove3()
@@ -349,6 +412,17 @@ public class UI : MonoBehaviour
                 Debug.Log("No Move");
                 break;
         }
+        TurnReset();
+    }
+
+    public void TurnReset()
+    {
+        selection.gameObject.SetActive(false);
+        moves.gameObject.SetActive(false);
+        special.gameObject.SetActive(false);
+        items.gameObject.SetActive(false);
+
+        gabrielButton.GetComponent<SpriteRenderer>().sprite = gStanding;
     }
 
     public void nextRound()
