@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
 
-        healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
+        
 
 
     }
@@ -60,6 +60,8 @@ public class Enemy : MonoBehaviour
 
                 currentHealth = hp;
 
+                healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
+
                 manaBar.SetMaxMana(40); //set Angel's max mana to 40
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
@@ -77,6 +79,8 @@ public class Enemy : MonoBehaviour
                 mp = 40;
 
                 currentHealth = hp;
+
+                healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
 
                 manaBar.SetMaxMana(40); //set Angel's max mana to 40
 
@@ -101,6 +105,8 @@ public class Enemy : MonoBehaviour
 
                 currentHealth = hp;
 
+                healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
+
                 manaBar.SetMaxMana(50); //set Hula Dancer's max mana to 50
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
@@ -118,6 +124,8 @@ public class Enemy : MonoBehaviour
                 mp = 40;
 
                 currentHealth = hp;
+
+                healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
 
                 manaBar.SetMaxMana(40); //set Coconut Tree's max mana to 40
 
@@ -144,6 +152,8 @@ public class Enemy : MonoBehaviour
 
                 currentHealth = hp;
 
+                healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
+
                 manaBar.SetMaxMana(60); //set Demon's max mana to 60
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
@@ -160,6 +170,8 @@ public class Enemy : MonoBehaviour
                 mp = 30;
 
                 currentHealth = hp;
+
+                healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
 
                 manaBar.SetMaxMana(30); //set Volcano's max mana to 30
 
@@ -178,6 +190,8 @@ public class Enemy : MonoBehaviour
                 mp = 40;
 
                 currentHealth = hp;
+
+                healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
 
                 manaBar.SetMaxMana(40); //set Cerberus's max mana to 40
 
