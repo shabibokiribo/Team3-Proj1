@@ -25,9 +25,6 @@ public class UI : MonoBehaviour
     public TMP_Text moveErrorText;
     public TMP_Text potionErrorText;
 
-    public TMP_Text hpText;
-    public TMP_Text mpText;
-
     //SCRIPTS
     public MaryScr mScript;
     public FloydScr fScript;
@@ -122,9 +119,6 @@ public class UI : MonoBehaviour
 
             specialText.text = fScript.specialMove;
             potionText.text = "Potions Left: " + fScript.potions;
-
-            hpText.text = fScript.currentHealth + "/75";
-            mpText.text = fScript.currentMana + "/50";
         }
         
     }
@@ -147,8 +141,6 @@ public class UI : MonoBehaviour
             specialText.text = mScript.specialMove;
             potionText.text = "Potions Left: " + fScript.potions;
 
-            hpText.text = mScript.currentHealth + "/130";
-            mpText.text = mScript.currentMana + "/40";
         }
 
     }
@@ -171,8 +163,7 @@ public class UI : MonoBehaviour
             specialText.text = gScript.specialMove;
             potionText.text = "Potions Left: " + gScript.potions;
 
-            hpText.text = gScript.currentHealth + "/100";
-            mpText.text = gScript.currentMana + "/50";
+            
         }
 
     }
