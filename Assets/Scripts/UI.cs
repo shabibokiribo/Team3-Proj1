@@ -25,9 +25,6 @@ public class UI : MonoBehaviour
     public TMP_Text moveErrorText;
     public TMP_Text potionErrorText;
 
-    public TMP_Text hpText;
-    public TMP_Text mpText;
-
     //SCRIPTS
     public MaryScr mScript;
     public FloydScr fScript;
@@ -83,6 +80,19 @@ public class UI : MonoBehaviour
     void Update()
     {
         roundText.text = "Round " + currentRound;
+
+        if (mScript.movesLeft == 0)
+        {
+            maryButton.interactable = false;
+        }
+        if (fScript.movesLeft == 0)
+        {
+            floydButton.interactable = false;
+        }
+        if (gScript.movesLeft == 0)
+        {
+            gabrielButton.interactable = false;
+        }
     }
 
     
@@ -122,9 +132,6 @@ public class UI : MonoBehaviour
 
             specialText.text = fScript.specialMove;
             potionText.text = "Potions Left: " + fScript.potions;
-
-            hpText.text = fScript.currentHealth + "/75";
-            mpText.text = fScript.currentMana + "/50";
         }
         
     }
@@ -147,8 +154,6 @@ public class UI : MonoBehaviour
             specialText.text = mScript.specialMove;
             potionText.text = "Potions Left: " + fScript.potions;
 
-            hpText.text = mScript.currentHealth + "/130";
-            mpText.text = mScript.currentMana + "/40";
         }
 
     }
@@ -171,8 +176,7 @@ public class UI : MonoBehaviour
             specialText.text = gScript.specialMove;
             potionText.text = "Potions Left: " + gScript.potions;
 
-            hpText.text = gScript.currentHealth + "/100";
-            mpText.text = gScript.currentMana + "/50";
+            
         }
 
     }
@@ -198,8 +202,6 @@ public class UI : MonoBehaviour
         {
             case "Floyd":
                 fScript.movesLeft--;
-                maryButton.interactable = true;
-                gabrielButton.interactable = true;
 
                 fScript.TakeDamage(-25);
                 gScript.TakeDamage(-25);
@@ -211,8 +213,6 @@ public class UI : MonoBehaviour
                 break;
             case "Gabriel":
                 gScript.movesLeft--;
-                maryButton.interactable = true;
-                floydButton.interactable = true;
 
                 gabrielButton.GetComponent<SpriteRenderer>().sprite = gSpecial;
 
@@ -235,8 +235,6 @@ public class UI : MonoBehaviour
                 break;
             case "Mary":
                 mScript.movesLeft--;
-                floydButton.interactable = true;
-                gabrielButton.interactable = true;
 
                 // -5HP additional to all attacks, Take less 5 damage from hits, -40MP, Lasts 2 turns
 
@@ -261,8 +259,6 @@ public class UI : MonoBehaviour
         {
             case "Floyd":
                 fScript.movesLeft--;
-                maryButton.interactable = true;
-                gabrielButton.interactable = true;
                 
                 if(selectedEnemy == "Enemy1")
                 {
@@ -284,7 +280,7 @@ public class UI : MonoBehaviour
                 maryButton.interactable = true;
                 floydButton.interactable = true;
 
-                gabrielButton.GetComponent<SpriteRenderer>().sprite = gMove1;
+                gabrielButton.GetComponent<Image>().sprite = gMove1;
 
                 if (selectedEnemy == "Enemy1")
                 {
@@ -333,8 +329,6 @@ public class UI : MonoBehaviour
         {
             case "Floyd":
                 fScript.movesLeft--;
-                maryButton.interactable = true;
-                gabrielButton.interactable = true;
 
 
 
@@ -342,10 +336,8 @@ public class UI : MonoBehaviour
                 break;
             case "Gabriel":
                 gScript.movesLeft--;
-                maryButton.interactable = true;
-                floydButton.interactable = true;
 
-                gabrielButton.GetComponent<SpriteRenderer>().sprite = gMove2;
+                gabrielButton.GetComponent<Image>().sprite = gMove2;
 
                 gScript.GainMana(-10);
 
@@ -385,8 +377,6 @@ public class UI : MonoBehaviour
         {
             case "Floyd":
                 fScript.movesLeft--;
-                maryButton.interactable = true;
-                gabrielButton.interactable = true;
 
                 if (selectedEnemy == "Enemy1")
                 {
@@ -422,7 +412,7 @@ public class UI : MonoBehaviour
         special.gameObject.SetActive(false);
         items.gameObject.SetActive(false);
 
-        gabrielButton.GetComponent<SpriteRenderer>().sprite = gStanding;
+        gabrielButton.GetComponent<Image>().sprite = gStanding;
     }
 
     public void nextRound()

@@ -956,7 +956,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 151963019}
-  - component: {fileID: 151963021}
   - component: {fileID: 151963020}
   m_Layer: 0
   m_Name: Floyd
@@ -1028,31 +1027,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &151963021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 151963018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 653877cf5b188774ea9e5cfdd657c6f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAttacked: 0
-  healthBar: {fileID: 428621365}
-  manaBar: {fileID: 2123587028}
-  gm: {fileID: 637766998}
-  move1: 
-  move2: 
-  special: 
-  hp: 0
-  mp: 0
-  currentHealth: 0
-  currentMana: 0
-  enemyName: 
-  movesLeft: 1
 --- !u!1 &158712238
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,7 +1041,7 @@ GameObject:
   - component: {fileID: 158712240}
   - component: {fileID: 158712243}
   m_Layer: 5
-  m_Name: Enemy1
+  m_Name: Enemy1Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2842,7 +2816,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 543616639}
-  - component: {fileID: 543616641}
   - component: {fileID: 543616640}
   m_Layer: 0
   m_Name: Mary
@@ -2914,31 +2887,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &543616641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 543616638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 653877cf5b188774ea9e5cfdd657c6f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAttacked: 0
-  healthBar: {fileID: 395149550}
-  manaBar: {fileID: 419949483}
-  gm: {fileID: 637766998}
-  move1: 
-  move2: 
-  special: 
-  hp: 0
-  mp: 0
-  currentHealth: 0
-  currentMana: 0
-  enemyName: 
-  movesLeft: 1
 --- !u!1 &555978335
 GameObject:
   m_ObjectHideFlags: 0
@@ -3343,20 +3291,18 @@ MonoBehaviour:
   specialErrorText: {fileID: 1877174454}
   moveErrorText: {fileID: 1834019672}
   potionErrorText: {fileID: 1795847095}
-  hpText: {fileID: 0}
-  mpText: {fileID: 0}
   mScript: {fileID: 1366030478}
   fScript: {fileID: 1994516448}
   gScript: {fileID: 312289217}
   enemy1Scr: {fileID: 158712243}
-  enemy2Scr: {fileID: 0}
-  enemy3Scr: {fileID: 0}
+  enemy2Scr: {fileID: 1692419200}
+  enemy3Scr: {fileID: 2138339478}
   floydButton: {fileID: 1994516445}
   maryButton: {fileID: 1366030475}
   gabrielButton: {fileID: 312289214}
   Enemy1: {fileID: 158712240}
-  Enemy2: {fileID: 0}
-  Enemy3: {fileID: 0}
+  Enemy2: {fileID: 1692419201}
+  Enemy3: {fileID: 2138339479}
   activeChar: 
   selectedEnemy: 
   currentRound: 1
@@ -4865,7 +4811,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 973840175}
-  - component: {fileID: 973840176}
   - component: {fileID: 973840177}
   m_Layer: 0
   m_Name: Enemy 1
@@ -4892,31 +4837,6 @@ Transform:
   - {fileID: 158712239}
   m_Father: {fileID: 411289238}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &973840176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 973840174}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 653877cf5b188774ea9e5cfdd657c6f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAttacked: 0
-  healthBar: {fileID: 1153199469}
-  manaBar: {fileID: 159802054}
-  gm: {fileID: 637766998}
-  move1: 
-  move2: 
-  special: 
-  hp: 0
-  mp: 0
-  currentHealth: 0
-  currentMana: 0
-  enemyName: 
-  movesLeft: 1
 --- !u!114 &973840177
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5116,7 +5036,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1010152617}
-  - component: {fileID: 1010152619}
   - component: {fileID: 1010152618}
   m_Layer: 0
   m_Name: Enemy 2
@@ -5199,31 +5118,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1010152619
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1010152616}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 653877cf5b188774ea9e5cfdd657c6f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAttacked: 0
-  healthBar: {fileID: 412435016}
-  manaBar: {fileID: 1363578998}
-  gm: {fileID: 637766998}
-  move1: 
-  move2: 
-  special: 
-  hp: 0
-  mp: 0
-  currentHealth: 0
-  currentMana: 0
-  enemyName: 
-  movesLeft: 1
 --- !u!1 &1013354926
 GameObject:
   m_ObjectHideFlags: 0
@@ -7618,7 +7512,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1531854506}
-  - component: {fileID: 1531854508}
   - component: {fileID: 1531854507}
   m_Layer: 0
   m_Name: Enemy 3
@@ -7701,31 +7594,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &1531854508
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531854505}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 653877cf5b188774ea9e5cfdd657c6f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAttacked: 0
-  healthBar: {fileID: 1662492501}
-  manaBar: {fileID: 945271947}
-  gm: {fileID: 637766998}
-  move1: 
-  move2: 
-  special: 
-  hp: 0
-  mp: 0
-  currentHealth: 0
-  currentMana: 0
-  enemyName: 
-  movesLeft: 1
 --- !u!1 &1537970207
 GameObject:
   m_ObjectHideFlags: 0
@@ -8260,7 +8128,7 @@ GameObject:
   - component: {fileID: 1692419201}
   - component: {fileID: 1692419200}
   m_Layer: 5
-  m_Name: Enemy1
+  m_Name: Enemy2Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9607,7 +9475,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -553.43384, y: -1279.8542}
+  m_AnchoredPosition: {x: -554, y: -834}
   m_SizeDelta: {x: 103.7224, y: 95.1635}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1994516445
@@ -10479,7 +10347,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2131557372}
-  - component: {fileID: 2131557374}
   - component: {fileID: 2131557373}
   m_Layer: 0
   m_Name: Gabriel
@@ -10551,31 +10418,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &2131557374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2131557371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 653877cf5b188774ea9e5cfdd657c6f8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isAttacked: 0
-  healthBar: {fileID: 2129251356}
-  manaBar: {fileID: 236462486}
-  gm: {fileID: 637766998}
-  move1: 
-  move2: 
-  special: 
-  hp: 0
-  mp: 0
-  currentHealth: 0
-  currentMana: 0
-  enemyName: 
-  movesLeft: 1
 --- !u!1 &2138339476
 GameObject:
   m_ObjectHideFlags: 0
@@ -10590,7 +10432,7 @@ GameObject:
   - component: {fileID: 2138339479}
   - component: {fileID: 2138339478}
   m_Layer: 5
-  m_Name: Enemy1
+  m_Name: Enemy3 Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
