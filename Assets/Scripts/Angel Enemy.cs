@@ -19,15 +19,15 @@ public class AngelEnemy : MonoBehaviour
 
     //Character Stats
     public int hp = 50; //max health is 50
-    public int mp = 0; //max 40, Increases +10 per turn
+    public int mp = 0; //max 50, Increases +10 per turn
     public int currentHealth; //store character's current health
     public int currentMana; //store character's current Mana 
-    public string charName = "Angel";
+    public string enemyName = "Angel";
 
     //MOVESET
-    public string move1 = "Pound"; // -25HP
-    public string move2 = "Sweeping Blow"; // Hits all enemies -15HP
-    public string specialMove = "Rage"; // -5HP additional to all attacks, Take less 5 damage from hits, -40MP, Lasts 2 turns
+    public string move1 = "Holy Hit"; // -15HP
+    public string move2 = "Heavenly Light"; // Hits all enemies -15HP
+    public string specialMove = "Sunbeam"; // Hits one enemy for -45HP -50MP
 
     //Turns
     
@@ -40,7 +40,7 @@ public class AngelEnemy : MonoBehaviour
         healthBar.SetMaxHealth(hp); //set Angel's max health to hp (50)
 
        
-        manaBar.SetMaxMana(40); //set Angel's max mana to 40
+        manaBar.SetMaxMana(50); //set Angel's max mana to 50
 
         manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 

@@ -51,20 +51,22 @@ public class MaryScr : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.M) ) // TESTING: when the spacebar is pressed, take 20 damage 
         {
             Debug.Log("The M key was pressed");
-            GainMana(); // TESTING: when 'M' is pressed, gain 20 mana
+            GainMana(20); // TESTING: when 'M' is pressed, gain 20 mana
         }
     }
 
-    void TakeDamage(int damage) //take a certain amount of damage
+    public void TakeDamage(int damage) //take a certain amount of damage
     {
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth); //update health bar to match the character's current health
     }
 
-    void GainMana() //gain a certain amount of mana  (should increase by 10 after each turn ends)
+    public void GainMana(int mana) //gain a certain amount of mana  (should increase by 10 after each turn ends)
     {
-        currentMana += 10;
+        //currentMana += 10;
+
+        currentMana -= mana;
 
         manaBar.SetMana(currentMana); //update mana bar to match the character's current mana status
     }

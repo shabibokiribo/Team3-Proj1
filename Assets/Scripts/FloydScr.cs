@@ -56,16 +56,18 @@ public class FloydScr : MonoBehaviour
      
 
 
-    void TakeDamage(int damage) //take a certain amount of damage
+    public void TakeDamage(int damage) //take a certain amount of damage
     {
         currentHealth -= damage;
 
         healthBar.SetHealth(currentHealth); //update health bar to match the character's current health
     }
 
-    void GainMana() //gain a certain amount of mana  (should increase by 10 after each turn ends)
+    public void GainMana(int mana) //gain a certain amount of mana  (should increase by 10 after each turn ends)
     {
-        currentMana += 10;
+        //currentMana += 10;
+
+        currentMana -= mana;
 
         manaBar.SetMana(currentMana); //update mana bar to match the character's current mana status
     }
