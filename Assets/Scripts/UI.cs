@@ -67,6 +67,9 @@ public class UI : MonoBehaviour
 
     public bool multi = false;
 
+    //MAKE ENEMY.ISCHECKED FALSE WHENEVER SCENE SWITCHES
+    //MAKE THE MANA CHANGE BASED ON ROUND
+
 
     // Start is called before the first frame update
     void Start()
@@ -259,6 +262,7 @@ public class UI : MonoBehaviour
 
     public void OnClickMove1()
     {
+        Debug.Log("move1");
         switch (activeChar)
         {
             case "Floyd":
@@ -266,7 +270,8 @@ public class UI : MonoBehaviour
                 
                 if(selectedEnemy == "Enemy1")
                 {
-                    enemy1Scr.TakeDamage(5);
+                    Debug.Log(enemy1Scr.currentHealth);
+                    enemy1Scr.currentHealth = -5;
                 }
                 if (selectedEnemy == "Enemy2")
                 {
@@ -321,6 +326,7 @@ public class UI : MonoBehaviour
 
                 //take hp from enemy (-25)
                 break;
+            default: Debug.Log(activeChar); break;
 
             
         }

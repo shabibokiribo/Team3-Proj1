@@ -36,6 +36,8 @@ public class Enemy : MonoBehaviour
     public MaryScr mScr;
     public FloydScr fScr;
 
+    public bool isChecked = false;
+
     
 
 
@@ -73,6 +75,8 @@ public class Enemy : MonoBehaviour
                 manaBar.SetMaxMana(40); //set Angel's max mana to 40
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+                
+                isChecked = true;
 
             }
 
@@ -94,6 +98,8 @@ public class Enemy : MonoBehaviour
                 manaBar.SetMaxMana(40); //set Angel's max mana to 40
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+
+                isChecked = true;
             }
             
         }
@@ -119,6 +125,8 @@ public class Enemy : MonoBehaviour
                 manaBar.SetMaxMana(50); //set Hula Dancer's max mana to 50
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+
+                isChecked = true;
             }
 
             if(gm.currentWave == 2) //Coconut Tree
@@ -140,7 +148,7 @@ public class Enemy : MonoBehaviour
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
-
+                isChecked = true;
             }
             
 
@@ -166,6 +174,8 @@ public class Enemy : MonoBehaviour
                 manaBar.SetMaxMana(60); //set Demon's max mana to 60
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+
+                isChecked = true;
             }
 
             if(gm.currentWave == 2)
@@ -185,6 +195,8 @@ public class Enemy : MonoBehaviour
                 manaBar.SetMaxMana(30); //set Volcano's max mana to 30
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+
+                isChecked = true;
             }
 
             if(gm.currentWave == 3)
@@ -206,6 +218,7 @@ public class Enemy : MonoBehaviour
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
+                isChecked = true;
             }
         }
     }

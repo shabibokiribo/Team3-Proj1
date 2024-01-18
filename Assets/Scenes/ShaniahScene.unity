@@ -1186,6 +1186,10 @@ MonoBehaviour:
   currentMana: 0
   enemyName: 
   movesLeft: 1
+  currentOpponent: 0
+  gScr: {fileID: 312289217}
+  mScr: {fileID: 1366030478}
+  fScr: {fileID: 1994516448}
 --- !u!1 &159802052
 GameObject:
   m_ObjectHideFlags: 0
@@ -3315,6 +3319,8 @@ MonoBehaviour:
   gMove1: {fileID: 21300000, guid: f3c13deb8bb1447458c5a12791f83295, type: 3}
   gMove2: {fileID: 21300000, guid: efe542d808479fb4c96400ab3e35164d, type: 3}
   gSpecial: {fileID: 21300000, guid: 7878f7f7c615e6545abb6a2e0a54cac7, type: 3}
+  randomMove: 0
+  multi: 0
 --- !u!1 &643521724
 GameObject:
   m_ObjectHideFlags: 0
@@ -8179,6 +8185,10 @@ MonoBehaviour:
   currentMana: 0
   enemyName: 
   movesLeft: 1
+  currentOpponent: 0
+  gScr: {fileID: 312289217}
+  mScr: {fileID: 1366030478}
+  fScr: {fileID: 1994516448}
 --- !u!114 &1692419201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10483,6 +10493,10 @@ MonoBehaviour:
   currentMana: 0
   enemyName: 
   movesLeft: 1
+  currentOpponent: 0
+  gScr: {fileID: 312289217}
+  mScr: {fileID: 1366030478}
+  fScr: {fileID: 1994516448}
 --- !u!114 &2138339479
 MonoBehaviour:
   m_ObjectHideFlags: 0
