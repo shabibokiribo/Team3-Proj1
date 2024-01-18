@@ -30,6 +30,14 @@ public class Enemy : MonoBehaviour
 
     public int movesLeft = 1;
 
+    public int currentOpponent;
+
+    public GabrielScr gScr;
+    public MaryScr mScr;
+    public FloydScr fScr;
+
+    
+
 
 
     // Start is called before the first frame update
@@ -53,18 +61,19 @@ public class Enemy : MonoBehaviour
 
                 move1 = "Angel Main Attack"; //-10HP to one character
                 move2 = "Angel Heavy Attack"; //-20HP to one character
-                special = "Angel Beam"; //-25 HP to all of party, -40MP
+                special = "Angel Beam"; //-5 HP to all of party, -40MP
 
                 hp = 40;
                 mp = 40;
 
                 currentHealth = hp;
 
-                healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
+                healthBar.SetMaxHealth(hp); //set Angel's max health to hp (100)
 
                 manaBar.SetMaxMana(40); //set Angel's max mana to 40
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+
             }
 
             if(gm.currentWave == 2) //Cherubs
@@ -117,7 +126,7 @@ public class Enemy : MonoBehaviour
                 enemyName = "Coconut Tree";
 
                 move1 = "Coconut Launch"; //-15HP
-                move2 = "Speedy Coconut Launch"; //-20HP -10MP
+                move2 = "Speedy Coconut Launch"; //-20HP 
                 special = "Void Coconut"; //-35HP -30MP
 
                 hp = 75;
@@ -144,7 +153,7 @@ public class Enemy : MonoBehaviour
                 enemyName = "Demon";
 
                 move1 = "Pitchfork Stab"; //-10HP
-                move2 = "Flaming Pitchfork"; //-30HP -20MP
+                move2 = "Flaming Pitchfork"; //-30HP
                 special = "Flaming Riff"; //-25HP from all players, 40MP
 
                 hp = 40;
@@ -215,5 +224,100 @@ public class Enemy : MonoBehaviour
         currentMana -= mana;
 
         manaBar.SetMana(currentMana); //update mana bar to match the character's current mana status
+    }
+
+    public void EnemyMove1(int damage)
+    {
+        currentOpponent = Random.Range(0, 2);
+
+        Debug.Log(move1);
+
+        if (gm.multi == true)
+        {
+            currentOpponent = 3;
+        }
+
+        if (currentOpponent == 0)
+        {
+            gScr.TakeDamage(damage);
+        }
+        if (currentOpponent == 1)
+        {
+            mScr.TakeDamage(damage);
+        }
+        if (currentOpponent == 2)
+        {
+            fScr.TakeDamage(damage);
+        }
+        if (currentOpponent == 3)
+        {
+            gScr.TakeDamage(damage);
+            mScr.TakeDamage(damage);
+            fScr.TakeDamage(damage);
+        }
+
+    }
+    public void EnemyMove2(int damage)
+    {
+        currentOpponent = Random.Range(0, 2);
+
+        Debug.Log(move2);
+
+        if (gm.multi == true)
+        {
+            currentOpponent = 3;
+        }
+
+        if (currentOpponent == 0)
+        {
+            gScr.TakeDamage(damage);
+        }
+        if (currentOpponent == 1)
+        {
+            mScr.TakeDamage(damage);
+        }
+        if (currentOpponent == 2)
+        {
+            fScr.TakeDamage(damage);
+        }
+        if(currentOpponent == 3)
+        {
+            gScr.TakeDamage(damage);
+            mScr.TakeDamage(damage);
+            fScr.TakeDamage(damage);
+        }
+
+    }
+    public void EnemySpecial(int damage)
+    {
+
+        Debug.Log(special);
+        currentOpponent = Random.Range(0, 2);
+        manaBar.CurrentValue(0);
+
+        if (gm.multi == true)
+        {
+            currentOpponent = 3;
+        }
+
+        if (currentOpponent == 0)
+        {
+            gScr.TakeDamage(damage);
+        }
+        if (currentOpponent == 1)
+        {
+            mScr.TakeDamage(damage);
+        }
+        if (currentOpponent == 2)
+        {
+            fScr.TakeDamage(damage);
+        }
+        if (currentOpponent == 3)
+        {
+            gScr.TakeDamage(damage);
+            mScr.TakeDamage(damage);
+            fScr.TakeDamage(damage);
+        }
+
     }
 }

@@ -63,6 +63,10 @@ public class UI : MonoBehaviour
     public Sprite gMove2;
     public Sprite gSpecial;
 
+    public int randomMove;
+
+    public bool multi = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -412,6 +416,10 @@ public class UI : MonoBehaviour
         special.gameObject.SetActive(false);
         items.gameObject.SetActive(false);
 
+        nextRound();
+
+        nextWave();
+
         gabrielButton.GetComponent<Image>().sprite = gStanding;
     }
 
@@ -419,12 +427,371 @@ public class UI : MonoBehaviour
     {
         if (gScript.movesLeft == 0 && fScript.movesLeft == 0 && mScript.movesLeft == 0)
         {
+            EnemyAttack();
             currentRound += 1;
             gScript.movesLeft += 1;
             fScript.movesLeft += 1;
             mScript.movesLeft += 1;
+            nextWave();
         }
     }
+
+    public void EnemyAttack()
+    {
+        if (enemy1Scr.currentMana != enemy1Scr.mp)
+        {
+            randomMove = Random.Range(0, 2);
+        }
+        else if (enemy2Scr.currentMana != enemy2Scr.mp)
+        {
+            randomMove = Random.Range(0, 2);
+        }
+        else if (enemy3Scr.currentMana != enemy3Scr.mp)
+        {
+            randomMove = Random.Range(0, 2);
+        }
+        else
+        {
+            if (enemy1Scr.enemyName == "Angel")
+            {
+                multi = true;
+                enemy1Scr.EnemySpecial(5);
+                multi = false;
+            }
+            if (enemy2Scr.enemyName == "Angel")
+            {
+                multi = true;
+                enemy2Scr.EnemySpecial(5);
+                multi = false;
+            }
+            if (enemy3Scr.enemyName == "Angel")
+            {
+                multi = true;
+                enemy3Scr.EnemySpecial(5);
+                multi = false;
+            }
+
+            //==================================
+
+            if (enemy1Scr.enemyName == "Cherub")
+            {
+                multi = true;
+                enemy1Scr.EnemySpecial(10);
+                multi = false;
+            }
+            if (enemy2Scr.enemyName == "Cherub")
+            {
+                multi = true;
+                enemy2Scr.EnemySpecial(10);
+                multi = false;
+            }
+            if (enemy3Scr.enemyName == "Cherub")
+            {
+                multi = true;
+                enemy3Scr.EnemySpecial(10);
+                multi = false;
+            }
+
+            //==================================
+
+            if (enemy1Scr.enemyName == "Hula Dancer")
+            {
+                multi = true;
+                enemy1Scr.EnemySpecial(15);
+                multi = false;
+            }
+            if (enemy2Scr.enemyName == "Hula Dancer")
+            {
+                multi = true;
+                enemy2Scr.EnemySpecial(15);
+                multi = false;
+            }
+            if (enemy3Scr.enemyName == "Hula Dancer")
+            {
+                multi = true;
+                enemy3Scr.EnemySpecial(15);
+                multi = false;
+            }
+
+            //==================================
+
+            if (enemy1Scr.enemyName == "Coconut Tree")
+            {
+                enemy1Scr.EnemySpecial(30);
+            }
+            if (enemy2Scr.enemyName == "Coconut Tree")
+            {
+                enemy2Scr.EnemySpecial(30);
+            }
+            if (enemy3Scr.enemyName == "Coconut Tree")
+            {
+                enemy3Scr.EnemySpecial(30);
+            }
+
+            //==================================
+
+            if (enemy1Scr.enemyName == "Demon")
+            {
+                multi = true;
+                enemy1Scr.EnemySpecial(20);
+                multi = false;
+            }
+            if (enemy2Scr.enemyName == "Demon")
+            {
+                multi = true;
+                enemy2Scr.EnemySpecial(20);
+                multi = false;
+            }
+            if (enemy3Scr.enemyName == "Demon")
+            {
+                multi = true;
+                enemy3Scr.EnemySpecial(20);
+                multi = false;
+            }
+
+            //==================================
+
+            if (enemy1Scr.enemyName == "Volcano")
+            {
+                multi = true;
+                enemy1Scr.EnemySpecial(10);
+                multi = false;
+            }
+            if (enemy2Scr.enemyName == "Volcano")
+            {
+                multi = true;
+                enemy2Scr.EnemySpecial(10);
+                multi = false;
+            }
+            if (enemy3Scr.enemyName == "Volcano")
+            {
+                multi = true;
+                enemy3Scr.EnemySpecial(10);
+                multi = false;
+            }
+
+            //==================================
+
+            if (enemy1Scr.enemyName == "Cerberus")
+            {
+                multi = true;
+                enemy1Scr.EnemySpecial(35);
+                multi = false;
+            }
+
+            //==================================
+     
+    }
+
+
+        if (randomMove == 0)
+        {
+            if (enemy1Scr.enemyName == "Angel")
+            {
+                enemy1Scr.EnemyMove1(10);
+            }
+            if (enemy2Scr.enemyName == "Angel")
+            {
+                enemy2Scr.EnemyMove1(10);
+            }
+            if (enemy3Scr.enemyName == "Angel")
+            {
+                enemy3Scr.EnemyMove1(10);
+            }
+
+            //==================================
+
+            if (enemy1Scr.enemyName == "Cherub")
+            {
+                enemy1Scr.EnemyMove1(5);
+            }
+            if (enemy2Scr.enemyName == "Cherub")
+            {
+                enemy2Scr.EnemyMove1(5);
+            }
+            if (enemy3Scr.enemyName == "Cherub")
+            {
+                enemy3Scr.EnemyMove1(5);
+            }
+
+            //==================================
+
+            if (enemy1Scr.enemyName == "Hula Dancer")
+            {
+                enemy1Scr.EnemyMove1(10);
+            }
+            if (enemy2Scr.enemyName == "Hula Dancer")
+            {
+                enemy2Scr.EnemyMove1(10);
+            }
+            if (enemy3Scr.enemyName == "Hula Dancer")
+            {
+                enemy3Scr.EnemyMove1(10);
+            }
+
+            //==================================
+
+            if (enemy1Scr.enemyName == "Coconut Tree")
+            {
+                enemy1Scr.EnemyMove1(15);
+            }
+            if (enemy2Scr.enemyName == "Coconut Tree")
+            {
+                enemy2Scr.EnemyMove1(15);
+            }
+            if (enemy3Scr.enemyName == "Coconut Tree")
+            {
+                enemy3Scr.EnemyMove1(15);
+            }
+
+            //==================================
+
+            if (enemy1Scr.enemyName == "Demon")
+            {
+                enemy1Scr.EnemyMove1(10);
+            }
+            if (enemy2Scr.enemyName == "Demon")
+            {
+                enemy2Scr.EnemyMove1(10);
+            }
+            if (enemy3Scr.enemyName == "Demon")
+            {
+                enemy3Scr.EnemyMove1(10);
+            }
+
+            //==================================
+
+            if (enemy1Scr.enemyName == "Volcano")
+            {
+                enemy1Scr.EnemyMove1(15);
+            }
+            if (enemy2Scr.enemyName == "Volcano")
+            {
+                enemy2Scr.EnemyMove1(15);
+            }
+            if (enemy3Scr.enemyName == "Volcano")
+            {
+                enemy3Scr.EnemyMove1(15);
+            }
+
+            //==================================
+
+            if (enemy1Scr.enemyName == "Cerberus")
+            {
+                enemy1Scr.EnemyMove1(25);
+            }
+
+            //==================================
+
+
+
+        }
+
+        if (randomMove == 1)
+        {
+            if (enemy1Scr.enemyName == "Angel")
+            {
+                enemy1Scr.EnemyMove2(20);
+            }
+            if (enemy2Scr.enemyName == "Angel")
+            {
+                enemy2Scr.EnemyMove2(20);
+            }
+            if (enemy3Scr.enemyName == "Angel")
+            {
+                enemy3Scr.EnemyMove2(20);
+            }
+
+            //==================================
+
+            if (enemy1Scr.enemyName == "Cherub")
+            {
+                enemy1Scr.EnemyMove2(10);
+            }
+            if (enemy2Scr.enemyName == "Cherub")
+            {
+                enemy2Scr.EnemyMove2(10);
+            }
+            if (enemy3Scr.enemyName == "Cherub")
+            {
+                enemy3Scr.EnemyMove2(10);
+            }
+
+            //==================================
+
+            if (enemy1Scr.enemyName == "Hula Dancer")
+            {
+                enemy1Scr.EnemyMove2(15);
+            }
+            if (enemy2Scr.enemyName == "Hula Dancer")
+            {
+                enemy2Scr.EnemyMove2(15);
+            }
+            if (enemy3Scr.enemyName == "Hula Dancer")
+            {
+                enemy3Scr.EnemyMove2(15);
+            }
+
+            //==================================
+
+            if (enemy1Scr.enemyName == "Coconut Tree")
+            {
+                enemy1Scr.EnemyMove2(20);
+            }
+            if (enemy2Scr.enemyName == "Coconut Tree")
+            {
+                enemy2Scr.EnemyMove2(20);
+            }
+            if (enemy3Scr.enemyName == "Coconut Tree")
+            {
+                enemy3Scr.EnemyMove2(20);
+            }
+
+            //==================================
+
+            if (enemy1Scr.enemyName == "Demon")
+            {
+                enemy1Scr.EnemyMove2(30);
+            }
+            if (enemy2Scr.enemyName == "Demon")
+            {
+                enemy2Scr.EnemyMove2(30);
+            }
+            if (enemy3Scr.enemyName == "Demon")
+            {
+                enemy3Scr.EnemyMove2(30);
+            }
+
+            //==================================
+
+            if (enemy1Scr.enemyName == "Volcano")
+            {
+                enemy1Scr.EnemyMove2(0);
+            }
+            if (enemy2Scr.enemyName == "Volcano")
+            {
+                enemy2Scr.EnemyMove2(0);
+            }
+            if (enemy3Scr.enemyName == "Volcano")
+            {
+                enemy3Scr.EnemyMove2(0);
+            }
+
+            //==================================
+
+            if (enemy1Scr.enemyName == "Cerberus")
+            {
+                enemy1Scr.EnemyMove2(25);
+            }
+
+            //==================================
+
+
+
+        }
+
+    }
+
 
     public void nextWave()
     {
