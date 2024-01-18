@@ -72,4 +72,6 @@ public class GabrielScr : MonoBehaviour
 
         manaBar.SetMana(currentMana); //update mana bar to match the character's current mana status
     }
+
+
 }

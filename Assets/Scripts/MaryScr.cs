@@ -73,8 +73,5 @@ public class MaryScr : MonoBehaviour
 
     //BUTTONS
 
-    public void OnClickSelectMary()
-    {
-        Debug.Log("Mary is selected");
-    }
+    
 }

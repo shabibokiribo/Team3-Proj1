@@ -10,8 +10,6 @@ public class FloydScr : MonoBehaviour
     // Mana Bar
     public ManaBar manaBar; //reference to Mana Bar script
 
-    // Angel Enemy
-    public AngelEnemy angelEnemyScr; //reference to Mana Bar script
 
     //Character Stats
     public int hp = 75; //max 75
