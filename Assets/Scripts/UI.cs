@@ -515,6 +515,10 @@ public class UI : MonoBehaviour
     {
         if (gScript.movesLeft == 0 && fScript.movesLeft == 0 && mScript.movesLeft == 0)
         {
+            gabrielButton.interactable = true;
+            maryButton.interactable = true;
+            floydButton.interactable = true;
+
             EnemyAttack();
             currentRound += 1;
             gScript.movesLeft += 1;
