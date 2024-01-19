@@ -8237,7 +8237,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 637766998}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
-        m_MethodName: OnClickEnemy1
+        m_MethodName: OnClickEnemy2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -10546,7 +10546,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 637766998}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
-        m_MethodName: OnClickEnemy1
+        m_MethodName: OnClickEnemy3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

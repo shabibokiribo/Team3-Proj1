@@ -525,6 +525,14 @@ public class UI : MonoBehaviour
             fScript.movesLeft += 1;
             mScript.movesLeft += 1;
             nextWave();
+
+            gScript.GainMana(10);
+            mScript.GainMana(10);
+            fScript.GainMana(10);
+
+            enemy1Scr.GainMana(10);
+            enemy2Scr.GainMana(10);
+            enemy3Scr.GainMana(10);
         }
     }
 
