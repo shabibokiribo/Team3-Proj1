@@ -76,7 +76,7 @@ public class Enemy : MonoBehaviour
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
                 
-                isChecked = true;
+                //isChecked = true;
 
             }
 
@@ -99,7 +99,7 @@ public class Enemy : MonoBehaviour
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
-                isChecked = true;
+                //isChecked = true;
             }
             
         }
@@ -126,7 +126,7 @@ public class Enemy : MonoBehaviour
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
-                isChecked = true;
+                //isChecked = true;
             }
 
             if(gm.currentWave == 2) //Coconut Tree
@@ -148,7 +148,7 @@ public class Enemy : MonoBehaviour
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
-                isChecked = true;
+                //isChecked = true;
             }
             
 
@@ -175,7 +175,7 @@ public class Enemy : MonoBehaviour
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
-                isChecked = true;
+                //isChecked = true;
             }
 
             if(gm.currentWave == 2)
@@ -196,7 +196,7 @@ public class Enemy : MonoBehaviour
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
-                isChecked = true;
+                //isChecked = true;
             }
 
             if(gm.currentWave == 3)
@@ -218,7 +218,7 @@ public class Enemy : MonoBehaviour
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
-                isChecked = true;
+                //isChecked = true;
             }
         }
     }

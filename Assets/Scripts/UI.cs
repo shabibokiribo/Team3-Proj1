@@ -50,8 +50,8 @@ public class UI : MonoBehaviour
       //get enemy script 
 
     //Round & Scene Manager
-    public int currentRound = 1;
-    public int currentWave = 1;
+    public int currentRound = 0;
+    public int currentWave = 0;
     public Scene scene;
     public string sceneName;
 
@@ -67,6 +67,9 @@ public class UI : MonoBehaviour
 
     public bool multi = false;
 
+
+
+
     //MAKE ENEMY.ISCHECKED FALSE WHENEVER SCENE SWITCHES
     //MAKE THE MANA CHANGE BASED ON ROUND
 
@@ -74,6 +77,9 @@ public class UI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+        currentRound = 1;
+        nextWave();
         scene = SceneManager.GetActiveScene();
         sceneName = scene.name;
 
@@ -81,6 +87,11 @@ public class UI : MonoBehaviour
         items.gameObject.SetActive(false);
         special.gameObject.SetActive(false);
         selection.gameObject.SetActive(false);
+
+        moveErrorText.text = " ";
+        specialErrorText.text = " ";
+        potionErrorText.text = " ";
+
     }
 
     // Update is called once per frame
@@ -99,6 +110,12 @@ public class UI : MonoBehaviour
         if (gScript.movesLeft == 0)
         {
             gabrielButton.interactable = false;
+ 
+        }
+
+        if (enemy1Scr.currentHealth <= 0 && enemy2Scr.currentHealth <= 0 && enemy3Scr.currentHealth <= 0)
+        {
+            nextWave();
         }
     }
 
@@ -208,40 +225,69 @@ public class UI : MonoBehaviour
         switch (activeChar)
         {
             case "Floyd":
-                fScript.movesLeft--;
 
-                fScript.TakeDamage(-25);
-                gScript.TakeDamage(-25);
-                mScript.TakeDamage(-25);
+                if(fScript.currentMana < 40)
+                {
+                    specialErrorText.text = "Not Enough Mana";
+                }
 
-                fScript.GainMana(-40);
+                else
+                {
+                    fScript.movesLeft--;
 
-                //give  hp to party (25) & take 40 mana from floyd
+                    fScript.TakeDamage(-25);
+                    gScript.TakeDamage(-25);
+                    mScript.TakeDamage(-25);
+
+                    fScript.GainMana(-40);
+
+                    //give  hp to party (25) & take 40 mana from floyd
+                }
+
+
                 break;
             case "Gabriel":
-                gScript.movesLeft--;
 
-                gabrielButton.GetComponent<SpriteRenderer>().sprite = gSpecial;
-
-                if (selectedEnemy == "Enemy1")
+                if (gScript.currentMana < 40)
                 {
-                    enemy1Scr.TakeDamage(35);
-                }
-                if (selectedEnemy == "Enemy2")
-                {
-                    enemy2Scr.TakeDamage(35);
-                }
-                if (selectedEnemy == "Enemy3")
-                {
-                    enemy3Scr.TakeDamage(35);
+                    specialErrorText.text = "Not Enough Mana";
                 }
 
-                gScript.GainMana(-40);
+                else
+                {
+                    gScript.movesLeft--;
+
+                    gabrielButton.GetComponent<SpriteRenderer>().sprite = gSpecial;
+
+                    if (selectedEnemy == "Enemy1")
+                    {
+                        enemy1Scr.TakeDamage(35);
+                    }
+                    if (selectedEnemy == "Enemy2")
+                    {
+                        enemy2Scr.TakeDamage(35);
+                    }
+                    if (selectedEnemy == "Enemy3")
+                    {
+                        enemy3Scr.TakeDamage(35);
+                    }
+
+                    gScript.GainMana(-40);
+                }
+
+                
 
                 //take hp from enemy (-35) &  take 40 mana
                 break;
             case "Mary":
+                if (mScript.currentMana < 40)
+                {
+                    specialErrorText.text = "Not enough mana";
+                }
+
                 mScript.movesLeft--;
+
+
 
                 // -5HP additional to all attacks, Take less 5 damage from hits, -40MP, Lasts 2 turns
 
@@ -270,8 +316,7 @@ public class UI : MonoBehaviour
                 
                 if(selectedEnemy == "Enemy1")
                 {
-                    Debug.Log(enemy1Scr.currentHealth);
-                    enemy1Scr.currentHealth = -5;
+                    enemy1Scr.TakeDamage(5);
                 }
                 if (selectedEnemy == "Enemy2")
                 {
@@ -338,33 +383,53 @@ public class UI : MonoBehaviour
         switch (activeChar)
         {
             case "Floyd":
-                fScript.movesLeft--;
+
+                if(fScript.currentMana < 5)
+                {
+                    moveErrorText.text = "Not enough mana";
+                }
+
+                else
+                {
+                    fScript.movesLeft--;
+                }
+                
 
 
 
                 //heal selected team mate (+25HP -5MP)
                 break;
             case "Gabriel":
-                gScript.movesLeft--;
 
-                gabrielButton.GetComponent<Image>().sprite = gMove2;
-
-                gScript.GainMana(-10);
-
-                if (selectedEnemy == "Enemy1")
+                if(gScript.currentMana < 10)
                 {
-                    enemy1Scr.TakeDamage(20);
-                }
-                if (selectedEnemy == "Enemy2")
-                {
-                    enemy2Scr.TakeDamage(20);
-                }
-                if (selectedEnemy == "Enemy3")
-                {
-                    enemy3Scr.TakeDamage(20);
+                    moveErrorText.text = "Not enough mana";
                 }
 
-                //take hp from enemy (-20HP -10MP)
+                else
+                {
+                    gScript.movesLeft--;
+
+                    gabrielButton.GetComponent<Image>().sprite = gMove2;
+
+                    gScript.GainMana(-10);
+
+                    if (selectedEnemy == "Enemy1")
+                    {
+                        enemy1Scr.TakeDamage(20);
+                    }
+                    if (selectedEnemy == "Enemy2")
+                    {
+                        enemy2Scr.TakeDamage(20);
+                    }
+                    if (selectedEnemy == "Enemy3")
+                    {
+                        enemy3Scr.TakeDamage(20);
+                    }
+
+                    //take hp from enemy (-20HP -10MP)
+                }
+
                 break;
             case "Mary":
                 mScript.movesLeft--;
@@ -386,22 +451,32 @@ public class UI : MonoBehaviour
         switch (activeChar)
         {
             case "Floyd":
-                fScript.movesLeft--;
 
-                if (selectedEnemy == "Enemy1")
+                if (fScript.currentMana > 5)
                 {
-                    enemy1Scr.TakeDamage(15);
-                }
-                if (selectedEnemy == "Enemy2")
-                {
-                    enemy2Scr.TakeDamage(15);
-                }
-                if (selectedEnemy == "Enemy3")
-                {
-                    enemy3Scr.TakeDamage(15);
+                    moveErrorText.text = "Not enough mana";
                 }
 
-                fScript.GainMana(-5);
+                else
+                {
+                    fScript.movesLeft--;
+
+                    if (selectedEnemy == "Enemy1")
+                    {
+                        enemy1Scr.TakeDamage(15);
+                    }
+                    if (selectedEnemy == "Enemy2")
+                    {
+                        enemy2Scr.TakeDamage(15);
+                    }
+                    if (selectedEnemy == "Enemy3")
+                    {
+                        enemy3Scr.TakeDamage(15);
+                    }
+
+                    fScript.GainMana(-5);
+                }
+                
 
                 // -15HP , -5MP
                 break;
@@ -422,11 +497,18 @@ public class UI : MonoBehaviour
         special.gameObject.SetActive(false);
         items.gameObject.SetActive(false);
 
+        selectedEnemy = null;
+
         nextRound();
 
         nextWave();
 
         gabrielButton.GetComponent<Image>().sprite = gStanding;
+
+        specialErrorText.text = " ";
+        moveErrorText.text = " ";
+        potionErrorText.text = " ";
+
     }
 
     public void nextRound()
@@ -801,10 +883,23 @@ public class UI : MonoBehaviour
 
     public void nextWave()
     {
-        if(enemy1Scr.currentHealth <= 0 && enemy2Scr.currentHealth <= 0 && enemy3Scr.currentHealth <= 0)
-        {
             currentWave += 1;
-        }
+            Invoke("checkEnemy", 1.0f);
+    }
+
+    public void checkEnemy()
+    {
+        enemy1Scr.isChecked = true;
+        enemy2Scr.isChecked = true; 
+        enemy3Scr.isChecked = true;
+        Invoke("resetCheckEnemy", 1.0f);
+    }
+
+    public void resetCheckEnemy()
+    {
+        enemy1Scr.isChecked = false;
+        enemy2Scr.isChecked = false;
+        enemy3Scr.isChecked = false;
     }
 
 }
