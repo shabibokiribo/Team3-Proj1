@@ -7,7 +7,7 @@ public class ButtScript : MonoBehaviour
 {
     public void OnClickStart()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene("ShaniahScene");
     }
 
     public void OnClickHelp()
