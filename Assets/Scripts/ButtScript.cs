@@ -6,33 +6,46 @@ using UnityEngine.SceneManagement;
 public class ButtScript : MonoBehaviour
 {
     public AudioSource audioSource;
+    private string sceneName;
+
+    IEnumerator PlayAudioAndLoadScene()
+    {
+        // Play AudioSource
+        audioSource.Play();
+
+        // Wait for half a second
+        yield return new WaitForSeconds(0.5f);
+
+        // Load your scene
+        SceneManager.LoadScene(sceneName);
+    }
+
     public void OnClickStart()
     {
-        audioSource.Play();
-        SceneManager.LoadScene("ShaniahScene");
+        sceneName = "ShaniahScene";
+        StartCoroutine(PlayAudioAndLoadScene());
     }
 
     public void OnClickHelp()
     {
-        audioSource.Play();
-        SceneManager.LoadScene("Help");
+        sceneName = "Help";
+        StartCoroutine(PlayAudioAndLoadScene());
     }
 
     public void OnClickCredits()
     {
-        audioSource.Play();
-        SceneManager.LoadScene("Credits");
+        sceneName = "Credits";
+        StartCoroutine(PlayAudioAndLoadScene());
     }
 
     public void OnClickBack()
     {
-        audioSource.Play();
-        SceneManager.LoadScene("mainMenu");
+        sceneName = "mainMenu";
+        StartCoroutine(PlayAudioAndLoadScene());
     }
 
     public void OnClickQuit()
     {
-        audioSource.Play();
         Application.Quit();
     }
 }
