@@ -292,6 +292,7 @@ public class UI : MonoBehaviour
                 if (gScript.currentMana < 40)
                 {
                     audioSource.clip = noManaSFX;
+                    Debug.Log("Working as intended!");
                     audioSource.Play();
                     specialErrorText.text = "Not Enough Mana";
                 }
@@ -361,6 +362,8 @@ public class UI : MonoBehaviour
         {
             case "Floyd":
                 fScript.movesLeft--;
+                audioSource.clip = floydMove1SFX;
+                audioSource.Play();
                 
                 if(selectedEnemy == "Enemy1")
                 {
@@ -381,6 +384,8 @@ public class UI : MonoBehaviour
                 gScript.movesLeft--;
                 maryButton.interactable = true;
                 floydButton.interactable = true;
+                audioSource.clip = gabrielMove1SFX;
+                audioSource.Play();
 
                 gabrielButton.GetComponent<Image>().sprite = gMove1;
 
@@ -403,6 +408,8 @@ public class UI : MonoBehaviour
                 mScript.movesLeft--;
                 floydButton.interactable = true;
                 gabrielButton.interactable = true;
+                audioSource.clip = maryMove1SFX;
+                audioSource.Play();
 
                 if (selectedEnemy == "Enemy1")
                 {
@@ -440,6 +447,8 @@ public class UI : MonoBehaviour
                 else
                 {
                     fScript.movesLeft--;
+                    audioSource.clip = floydMove2SFX;
+                    audioSource.Play();
                 }
                 
 
@@ -461,6 +470,8 @@ public class UI : MonoBehaviour
                     gabrielButton.GetComponent<Image>().sprite = gMove2;
 
                     gScript.GainMana(-10);
+                    audioSource.clip = gabrielMove2SFX;
+                    audioSource.Play();
 
                     if (selectedEnemy == "Enemy1")
                     {
@@ -484,6 +495,8 @@ public class UI : MonoBehaviour
                 //take hp from all enemies on board (-15)
                 floydButton.interactable = true;
                 gabrielButton.interactable = true;
+                audioSource.clip = maryMove2SFX;
+                audioSource.Play();
 
                 enemy1Scr.TakeDamage(15);
                 enemy2Scr.TakeDamage(15);
@@ -508,7 +521,8 @@ public class UI : MonoBehaviour
                 else
                 {
                     fScript.movesLeft--;
-
+                    audioSource.clip = floydMove3SFX;
+                    audioSource.Play();
                     if (selectedEnemy == "Enemy1")
                     {
                         enemy1Scr.TakeDamage(15);
