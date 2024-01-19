@@ -96,7 +96,7 @@ public class UI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSource.clip = selectSFX;
+        audioSource = GetComponent<AudioSource>();
         currentRound = 1;
         nextWave();
         scene = SceneManager.GetActiveScene();
