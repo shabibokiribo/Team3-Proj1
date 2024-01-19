@@ -96,7 +96,7 @@ public class UI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        audioSource.clip = selectSFX;
         currentRound = 1;
         nextWave();
         scene = SceneManager.GetActiveScene();
@@ -145,24 +145,28 @@ public class UI : MonoBehaviour
     
     public void OnClickEnemy1()
     {
+        audioSource.clip = selectSFX;
         audioSource.Play();
         selectedEnemy = "Enemy1";
     }
 
     public void OnClickEnemy2()
     {
+        audioSource.clip = selectSFX;
         audioSource.Play();
         selectedEnemy = "Enemy2";
     }
 
     public void OnClickEnemy3()
     {
+        audioSource.clip = selectSFX;
         audioSource.Play();
         selectedEnemy = "Enemy3";
     }
 
     public void OnClickFloyd()
     {
+        audioSource.clip = selectSFX;
         audioSource.Play();
         maryButton.interactable = false;
         gabrielButton.interactable = false;
@@ -185,6 +189,7 @@ public class UI : MonoBehaviour
 
     public void OnClickMary()
     {
+        audioSource.clip = selectSFX;
         audioSource.Play();
         maryButton.interactable = false;
         gabrielButton.interactable = false;
@@ -208,6 +213,7 @@ public class UI : MonoBehaviour
 
     public void OnClickGabriel()
     {
+        audioSource.clip = selectSFX;
         audioSource.Play();
         maryButton.interactable = false;
         gabrielButton.interactable = false;
@@ -232,6 +238,7 @@ public class UI : MonoBehaviour
 
     public void OnClickMove()
     {
+        audioSource.clip = selectSFX;
         audioSource.Play();
         selection.gameObject.SetActive(false);
         moves.gameObject.SetActive(true);
@@ -239,6 +246,7 @@ public class UI : MonoBehaviour
 
     public void OnClickItem()
     {
+        audioSource.clip = selectSFX;
         audioSource.Play();
         selection.gameObject.SetActive(false);
         items.gameObject.SetActive(true);
@@ -246,6 +254,7 @@ public class UI : MonoBehaviour
 
     public void OnClickSpecial()
     {
+        audioSource.clip = selectSFX;
         audioSource.Play();
         selection.gameObject.SetActive(false);
         special.gameObject.SetActive(true);
@@ -256,14 +265,15 @@ public class UI : MonoBehaviour
 
                 if(fScript.currentMana < 40)
                 {
-                    audioSource.clip(noManaSFX);
+                    audioSource.clip = noManaSFX;
                     audioSource.Play();
                     specialErrorText.text = "Not Enough Mana";
                 }
 
                 else
                 {
-                    audioSource.PlayOneShot(floydMoveSpecialSFX);
+                    audioSource.clip = floydMoveSpecialSFX;
+                    audioSource.Play();
                     fScript.movesLeft--;
 
                     fScript.TakeDamage(-25);
@@ -281,7 +291,7 @@ public class UI : MonoBehaviour
 
                 if (gScript.currentMana < 40)
                 {
-                    audioSource.clip(noManaSFX);
+                    audioSource.clip = noManaSFX;
                     audioSource.Play();
                     specialErrorText.text = "Not Enough Mana";
                 }
@@ -316,7 +326,7 @@ public class UI : MonoBehaviour
             case "Mary":
                 if (mScript.currentMana < 40)
                 {
-                    audioSource.clip(noManaSFX);
+                    audioSource.clip = noManaSFX;
                     audioSource.Play();
                     specialErrorText.text = "Not enough mana";
                 }
@@ -336,7 +346,8 @@ public class UI : MonoBehaviour
 
     public void OnClickBack()
     {
-
+        audioSource.clip = backSFX;
+        audioSource.Play();
         selection.gameObject.SetActive(true);
         moves.gameObject.SetActive(false);
         items.gameObject.SetActive(false);
@@ -955,18 +966,26 @@ public class UI : MonoBehaviour
     {
         if(fScript.potions > 1 && activeChar == "Floyd")
         {
+            audioSource.clip = noManaSFX;
+            audioSource.Play();
             potionErrorText.text = "No potions";
         }
         if (gScript.potions > 1 && activeChar == "Gabriel")
         {
+            audioSource.clip = noManaSFX;
+            audioSource.Play();
             potionErrorText.text = "No potions";
         }
         if (gScript.potions > 1 && activeChar == "Gabriel")
         {
+            audioSource.clip = noManaSFX;
+            audioSource.Play();
             potionErrorText.text = "No potions";
         }
         if (activeChar == "Mary")
         {
+            audioSource.clip = noManaSFX;
+            audioSource.Play();
             potionErrorText.text = "No potions";
         }
 
@@ -974,16 +993,22 @@ public class UI : MonoBehaviour
         {
             if(activeChar == "Floyd")
             {
+                audioSource.clip = potionSFX;
+                audioSource.Play();
                 fScript.TakeDamage(-10);
                 fScript.GainMana(5);
             }
             if (activeChar == "Gabriel")
             {
+                audioSource.clip = potionSFX;
+                audioSource.Play();
                 gScript.TakeDamage(-10);
                 gScript.GainMana(5);
             }
             if (activeChar == "Mary")
             {
+                audioSource.clip = potionSFX;
+                audioSource.Play();
                 mScript.TakeDamage(-10);
                 mScript.GainMana(5);
             }
