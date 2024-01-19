@@ -67,7 +67,26 @@ public class UI : MonoBehaviour
 
     public bool multi = false;
 
-
+    //SFX
+    //General SFX
+    public AudioSource audioSource;
+    public AudioClip selectSFX;
+    public AudioClip noManaSFX;
+    public AudioClip backSFX;
+    public AudioClip potionSFX;
+    //GabrielSFX
+    public AudioClip gabrielMove1SFX;
+    public AudioClip gabrielMove2SFX;
+    public AudioClip gabrielMoveSpecialSFX;
+    //FloydSFX
+    public AudioClip floydMove1SFX;
+    public AudioClip floydMove2SFX;
+    public AudioClip floydMove3SFX;
+    public AudioClip floydMoveSpecialSFX;
+    //MarySFX
+    public AudioClip maryMove1SFX;
+    public AudioClip maryMove2SFX;
+    public AudioClip maryMoveSpecialSFX;
 
 
     //MAKE ENEMY.ISCHECKED FALSE WHENEVER SCENE SWITCHES
@@ -126,21 +145,25 @@ public class UI : MonoBehaviour
     
     public void OnClickEnemy1()
     {
+        audioSource.Play();
         selectedEnemy = "Enemy1";
     }
 
     public void OnClickEnemy2()
     {
+        audioSource.Play();
         selectedEnemy = "Enemy2";
     }
 
     public void OnClickEnemy3()
     {
+        audioSource.Play();
         selectedEnemy = "Enemy3";
     }
 
     public void OnClickFloyd()
     {
+        audioSource.Play();
         maryButton.interactable = false;
         gabrielButton.interactable = false;
         floydButton.interactable = false;
@@ -162,6 +185,7 @@ public class UI : MonoBehaviour
 
     public void OnClickMary()
     {
+        audioSource.Play();
         maryButton.interactable = false;
         gabrielButton.interactable = false;
         floydButton.interactable = false;
@@ -184,6 +208,7 @@ public class UI : MonoBehaviour
 
     public void OnClickGabriel()
     {
+        audioSource.Play();
         maryButton.interactable = false;
         gabrielButton.interactable = false;
         floydButton.interactable = false;
@@ -207,18 +232,21 @@ public class UI : MonoBehaviour
 
     public void OnClickMove()
     {
+        audioSource.Play();
         selection.gameObject.SetActive(false);
         moves.gameObject.SetActive(true);
     }
 
     public void OnClickItem()
     {
+        audioSource.Play();
         selection.gameObject.SetActive(false);
         items.gameObject.SetActive(true);
     }
 
     public void OnClickSpecial()
     {
+        audioSource.Play();
         selection.gameObject.SetActive(false);
         special.gameObject.SetActive(true);
 
@@ -228,11 +256,14 @@ public class UI : MonoBehaviour
 
                 if(fScript.currentMana < 40)
                 {
+                    audioSource.clip(noManaSFX);
+                    audioSource.Play();
                     specialErrorText.text = "Not Enough Mana";
                 }
 
                 else
                 {
+                    audioSource.PlayOneShot(floydMoveSpecialSFX);
                     fScript.movesLeft--;
 
                     fScript.TakeDamage(-25);
@@ -250,11 +281,14 @@ public class UI : MonoBehaviour
 
                 if (gScript.currentMana < 40)
                 {
+                    audioSource.clip(noManaSFX);
+                    audioSource.Play();
                     specialErrorText.text = "Not Enough Mana";
                 }
 
                 else
                 {
+                    audioSource.PlayOneShot(gabrielMoveSpecialSFX);
                     gScript.movesLeft--;
 
                     gabrielButton.GetComponent<SpriteRenderer>().sprite = gSpecial;
@@ -282,6 +316,8 @@ public class UI : MonoBehaviour
             case "Mary":
                 if (mScript.currentMana < 40)
                 {
+                    audioSource.clip(noManaSFX);
+                    audioSource.Play();
                     specialErrorText.text = "Not enough mana";
                 }
 
@@ -300,6 +336,7 @@ public class UI : MonoBehaviour
 
     public void OnClickBack()
     {
+
         selection.gameObject.SetActive(true);
         moves.gameObject.SetActive(false);
         items.gameObject.SetActive(false);
