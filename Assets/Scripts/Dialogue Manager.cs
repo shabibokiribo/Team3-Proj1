@@ -12,4 +12,11 @@ public class DialogueManager : MonoBehaviour
     {
         sentences = new Queue<string>();
     }
+
+    public void StartDialogue(Dialogue dialogue)
+    {
+        Debug.Log("Commencing dialogue with " + dialogue.name);
+
+
+    }
 }
