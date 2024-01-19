@@ -902,4 +902,43 @@ public class UI : MonoBehaviour
         enemy3Scr.isChecked = false;
     }
 
+    public void OnClickPotion()
+    {
+        if(fScript.potions > 1 && activeChar == "Floyd")
+        {
+            potionErrorText.text = "No potions";
+        }
+        if (gScript.potions > 1 && activeChar == "Gabriel")
+        {
+            potionErrorText.text = "No potions";
+        }
+        if (gScript.potions > 1 && activeChar == "Gabriel")
+        {
+            potionErrorText.text = "No potions";
+        }
+        if (activeChar == "Mary")
+        {
+            potionErrorText.text = "No potions";
+        }
+
+        else
+        {
+            if(activeChar == "Floyd")
+            {
+                fScript.TakeDamage(-10);
+                fScript.GainMana(5);
+            }
+            if (activeChar == "Gabriel")
+            {
+                gScript.TakeDamage(-10);
+                gScript.GainMana(5);
+            }
+            if (activeChar == "Mary")
+            {
+                mScript.TakeDamage(-10);
+                mScript.GainMana(5);
+            }
+        }
+    }
+
 }
