@@ -96,6 +96,7 @@ public class UI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        gabrielButton.GetComponent<Image>().sprite = gStanding;
         audioSource = GetComponent<AudioSource>();
         currentRound = 1;
         nextWave();
@@ -299,10 +300,11 @@ public class UI : MonoBehaviour
 
                 else
                 {
+                    gabrielButton.GetComponent<Image>().sprite = gSpecial;
                     audioSource.PlayOneShot(gabrielMoveSpecialSFX);
                     gScript.movesLeft--;
 
-                    gabrielButton.GetComponent<SpriteRenderer>().sprite = gSpecial;
+                    
 
                     if (selectedEnemy == "Enemy1")
                     {
@@ -362,6 +364,8 @@ public class UI : MonoBehaviour
         {
             case "Floyd":
                 fScript.movesLeft--;
+                maryButton.interactable = true;
+                gabrielButton.interactable = true;
                 audioSource.clip = floydMove1SFX;
                 audioSource.Play();
                 
@@ -381,13 +385,14 @@ public class UI : MonoBehaviour
                 //take hp from enemy (-5)
                 break;
             case "Gabriel":
+                gabrielButton.GetComponent<Image>().sprite = gMove1;
                 gScript.movesLeft--;
                 maryButton.interactable = true;
                 floydButton.interactable = true;
                 audioSource.clip = gabrielMove1SFX;
                 audioSource.Play();
 
-                gabrielButton.GetComponent<Image>().sprite = gMove1;
+                
 
                 if (selectedEnemy == "Enemy1")
                 {
@@ -465,9 +470,10 @@ public class UI : MonoBehaviour
 
                 else
                 {
+                    gabrielButton.GetComponent<Image>().sprite = gMove2;
                     gScript.movesLeft--;
 
-                    gabrielButton.GetComponent<Image>().sprite = gMove2;
+                    
 
                     gScript.GainMana(-10);
                     audioSource.clip = gabrielMove2SFX;

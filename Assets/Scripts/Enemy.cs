@@ -38,7 +38,12 @@ public class Enemy : MonoBehaviour
 
     public bool isChecked = false;
 
-    
+    public Sprite cherub;
+    //public Sprite angel1;
+   // public Sprite angel2;
+    //public Sprite gSpecial;
+
+
 
 
 
@@ -76,7 +81,7 @@ public class Enemy : MonoBehaviour
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
                 
-                //isChecked = true;
+                
 
             }
 
@@ -99,7 +104,7 @@ public class Enemy : MonoBehaviour
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
-                //isChecked = true;
+                
             }
             
         }
@@ -126,7 +131,7 @@ public class Enemy : MonoBehaviour
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
-                //isChecked = true;
+                
             }
 
             if(gm.currentWave == 2) //Coconut Tree
@@ -148,7 +153,7 @@ public class Enemy : MonoBehaviour
 
                 manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
-                //isChecked = true;
+                
             }
             
 
