@@ -89,6 +89,8 @@ public class Enemy : MonoBehaviour
             {
                 enemyName = "Cherub";
 
+                //.GetComponent<Image>().sprite = gStanding;
+
                 move1 = "Cherub Main Attack"; //-5HP to one character
                 move2 = "Cherub Heavy Attack"; //-10HP to one character
                 special = "Cherub's Arrows"; //-15 HP to all of party, -40MP
