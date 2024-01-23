@@ -88,8 +88,11 @@ public class UI : MonoBehaviour
     public AudioClip maryMove2SFX;
     public AudioClip maryMoveSpecialSFX;
 
+    public bool isRage = false;
+    public int countRageRounds = 0;
 
-    //MAKE ENEMY.ISCHECKED FALSE WHENEVER SCENE SWITCHES
+    //public string currentAlly
+
     //MAKE THE MANA CHANGE BASED ON ROUND
 
 
@@ -98,8 +101,7 @@ public class UI : MonoBehaviour
     {
         gabrielButton.GetComponent<Image>().sprite = gStanding;
         audioSource = GetComponent<AudioSource>();
-        currentRound = 1;
-        nextWave();
+        //nextWave();
         scene = SceneManager.GetActiveScene();
         sceneName = scene.name;
 
@@ -334,7 +336,13 @@ public class UI : MonoBehaviour
                     specialErrorText.text = "Not enough mana";
                 }
 
-                mScript.movesLeft--;
+                else
+                {
+                    mScript.movesLeft--;
+                    isRage = true;
+                }
+                
+
 
 
 
@@ -418,15 +426,36 @@ public class UI : MonoBehaviour
 
                 if (selectedEnemy == "Enemy1")
                 {
-                    enemy1Scr.TakeDamage(25);
+                    if (isRage == true)
+                    {
+                        enemy1Scr.TakeDamage(35);
+                    }
+                    else
+                    {
+                        enemy1Scr.TakeDamage(25);
+                    }
                 }
                 if (selectedEnemy == "Enemy2")
                 {
-                    enemy2Scr.TakeDamage(25);
+                    if (isRage == true)
+                    {
+                        enemy2Scr.TakeDamage(35);
+                    }
+                    else
+                    {
+                        enemy2Scr.TakeDamage(25);
+                    }
                 }
                 if (selectedEnemy == "Enemy3")
                 {
-                    enemy3Scr.TakeDamage(25);
+                    if (isRage == true)
+                    {
+                        enemy3Scr.TakeDamage(35);
+                    }
+                    else
+                    {
+                        enemy3Scr.TakeDamage(25);
+                    }
                 }
 
                 //take hp from enemy (-25)
@@ -454,6 +483,8 @@ public class UI : MonoBehaviour
                     fScript.movesLeft--;
                     audioSource.clip = floydMove2SFX;
                     audioSource.Play();
+
+                    //
                 }
                 
 
@@ -602,6 +633,16 @@ public class UI : MonoBehaviour
             enemy1Scr.GainMana(10);
             enemy2Scr.GainMana(10);
             enemy3Scr.GainMana(10);
+
+            if(isRage == true)
+            {
+                countRageRounds += 1;
+                if (countRageRounds >= 2)
+                {
+                    isRage = false;
+                    countRageRounds = 0;
+                }
+            }
         }
     }
 
@@ -963,8 +1004,16 @@ public class UI : MonoBehaviour
 
     public void nextWave()
     {
-            currentWave += 1;
-            Invoke("checkEnemy", 1.0f);
+        if(enemy1Scr.currentHealth <= 0 && enemy2Scr.currentHealth <= 0 && enemy3Scr.currentHealth <= 0)
+        {
+            
+        }
+
+        currentWave += 1;
+        Invoke("checkEnemy", 1.0f);
+        enemy1Scr.changeMana();
+        enemy2Scr.changeMana();
+        enemy3Scr.changeMana();
     }
 
     public void nextLevel()

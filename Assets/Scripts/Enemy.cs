@@ -79,7 +79,8 @@ public class Enemy : MonoBehaviour
 
                 manaBar.SetMaxMana(40); //set Angel's max mana to 40
 
-                manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+                //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+
                 
                 
 
@@ -104,7 +105,7 @@ public class Enemy : MonoBehaviour
 
                 manaBar.SetMaxMana(40); //set Angel's max mana to 40
 
-                manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+                //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
                 
             }
@@ -131,7 +132,7 @@ public class Enemy : MonoBehaviour
 
                 manaBar.SetMaxMana(50); //set Hula Dancer's max mana to 50
 
-                manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+                //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
                 
             }
@@ -153,7 +154,7 @@ public class Enemy : MonoBehaviour
 
                 manaBar.SetMaxMana(40); //set Coconut Tree's max mana to 40
 
-                manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+                //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
                 
             }
@@ -180,7 +181,7 @@ public class Enemy : MonoBehaviour
 
                 manaBar.SetMaxMana(60); //set Demon's max mana to 60
 
-                manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+                //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
                 //isChecked = true;
             }
@@ -201,7 +202,7 @@ public class Enemy : MonoBehaviour
 
                 manaBar.SetMaxMana(30); //set Volcano's max mana to 30
 
-                manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+                //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
                 //isChecked = true;
             }
@@ -223,7 +224,7 @@ public class Enemy : MonoBehaviour
 
                 manaBar.SetMaxMana(40); //set Cerberus's max mana to 40
 
-                manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+                //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
                 //isChecked = true;
             }
@@ -339,5 +340,13 @@ public class Enemy : MonoBehaviour
             fScr.TakeDamage(damage);
         }
 
+    }
+
+    public void changeMana()
+    {
+        if(isChecked == false)
+        {
+            manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+        }
     }
 }
