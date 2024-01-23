@@ -101,7 +101,7 @@ public class UI : MonoBehaviour
     {
         gabrielButton.GetComponent<Image>().sprite = gStanding;
         audioSource = GetComponent<AudioSource>();
-        //nextWave();
+        nextWave();
         scene = SceneManager.GetActiveScene();
         sceneName = scene.name;
 
@@ -602,6 +602,8 @@ public class UI : MonoBehaviour
 
         nextWave();
 
+        nextLevel();
+
         gabrielButton.GetComponent<Image>().sprite = gStanding;
 
         specialErrorText.text = " ";
@@ -623,8 +625,6 @@ public class UI : MonoBehaviour
             gScript.movesLeft += 1;
             fScript.movesLeft += 1;
             mScript.movesLeft += 1;
-            nextWave();
-            nextLevel();
 
             gScript.GainMana(10);
             mScript.GainMana(10);
@@ -1004,11 +1004,6 @@ public class UI : MonoBehaviour
 
     public void nextWave()
     {
-        if(enemy1Scr.currentHealth <= 0 && enemy2Scr.currentHealth <= 0 && enemy3Scr.currentHealth <= 0)
-        {
-            
-        }
-
         currentWave += 1;
         Invoke("checkEnemy", 1.0f);
         enemy1Scr.changeMana();
@@ -1018,7 +1013,7 @@ public class UI : MonoBehaviour
 
     public void nextLevel()
     {
-        if(currentWave == 4)
+        if(currentWave == 3 && sceneName != "LevelThree")
         {
             currentWave = 0;
             if (sceneName == "ShaniahScene")
@@ -1029,7 +1024,6 @@ public class UI : MonoBehaviour
             {
                 SceneManager.LoadScene("LevelThree");
             }
-
         }
     }
 
