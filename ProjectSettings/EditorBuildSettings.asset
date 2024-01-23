@@ -11,9 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Help.unity
     guid: d352d431fb03aba4399b0a2addc0d317
-  - enabled: 1
-    path: Assets/Scenes/ShaniahScene.unity
-    guid: 1ad7cccfbd477f74cb0fe0823c128498
   - enabled: 0
     path: Assets/Scenes/Level1.unity
     guid: f9ade5e788aabf14f985b1c61cc80072
@@ -23,7 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/LevelOne.unity
     guid: b68ccd1ba436d61429fc97105b00ca62
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/ShaniahScene.unity
+    guid: 1ad7cccfbd477f74cb0fe0823c128498
   m_configObjects: {}

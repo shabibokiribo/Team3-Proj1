@@ -1319,7 +1319,7 @@ MonoBehaviour:
   mScr: {fileID: 1366030478}
   fScr: {fileID: 1994516448}
   isChecked: 0
-  cherub: {fileID: 0}
+  cherub: {fileID: 21300000, guid: 2ceb0b4e57047a243aa6210a2e10a4be, type: 3}
 --- !u!1 &159802052
 GameObject:
   m_ObjectHideFlags: 0
@@ -2336,9 +2336,9 @@ RectTransform:
   - {fileID: 2119621241}
   - {fileID: 76107653}
   - {fileID: 84018570}
-  - {fileID: 973840175}
   - {fileID: 1010152617}
   - {fileID: 1531854506}
+  - {fileID: 973840175}
   - {fileID: 151963019}
   - {fileID: 2131557372}
   - {fileID: 543616639}
@@ -5918,8 +5918,8 @@ Transform:
   m_GameObject: {fileID: 973840174}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -173.1, y: 74, z: -0.62954}
-  m_LocalScale: {x: 0.11101493, y: 0.11101493, z: 0.11101493}
+  m_LocalPosition: {x: -198.2, y: 63.2, z: -0.57271}
+  m_LocalScale: {x: 0.100996114, y: 0.100996114, z: 0.100996114}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 159802053}
@@ -8789,7 +8789,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_RaycastPadding: {x: 0, y: 517.79, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

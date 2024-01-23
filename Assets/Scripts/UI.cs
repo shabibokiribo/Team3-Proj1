@@ -593,6 +593,7 @@ public class UI : MonoBehaviour
             fScript.movesLeft += 1;
             mScript.movesLeft += 1;
             nextWave();
+            nextLevel();
 
             gScript.GainMana(10);
             mScript.GainMana(10);
@@ -960,11 +961,27 @@ public class UI : MonoBehaviour
 
     }
 
-
     public void nextWave()
     {
             currentWave += 1;
             Invoke("checkEnemy", 1.0f);
+    }
+
+    public void nextLevel()
+    {
+        if(currentWave == 4)
+        {
+            currentWave = 0;
+            if (sceneName == "ShaniahScene")
+            {
+                SceneManager.LoadScene("LevelTwo");
+            }
+            if (sceneName == "LevelTwo")
+            {
+                SceneManager.LoadScene("LevelThree");
+            }
+
+        }
     }
 
     public void checkEnemy()
@@ -1034,5 +1051,4 @@ public class UI : MonoBehaviour
             }
         }
     }
-
 }
