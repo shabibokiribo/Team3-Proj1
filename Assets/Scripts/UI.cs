@@ -88,16 +88,19 @@ public class UI : MonoBehaviour
     public AudioClip maryMove2SFX;
     public AudioClip maryMoveSpecialSFX;
 
+    public bool isRage = false;
+    public int countRageRounds = 0;
 
-    //MAKE ENEMY.ISCHECKED FALSE WHENEVER SCENE SWITCHES
+    //public string currentAlly
+
     //MAKE THE MANA CHANGE BASED ON ROUND
 
 
     // Start is called before the first frame update
     void Start()
     {
+        gabrielButton.GetComponent<Image>().sprite = gStanding;
         audioSource = GetComponent<AudioSource>();
-        currentRound = 1;
         nextWave();
         scene = SceneManager.GetActiveScene();
         sceneName = scene.name;
@@ -299,10 +302,11 @@ public class UI : MonoBehaviour
 
                 else
                 {
+                    gabrielButton.GetComponent<Image>().sprite = gSpecial;
                     audioSource.PlayOneShot(gabrielMoveSpecialSFX);
                     gScript.movesLeft--;
 
-                    gabrielButton.GetComponent<SpriteRenderer>().sprite = gSpecial;
+                    
 
                     if (selectedEnemy == "Enemy1")
                     {
@@ -332,7 +336,13 @@ public class UI : MonoBehaviour
                     specialErrorText.text = "Not enough mana";
                 }
 
-                mScript.movesLeft--;
+                else
+                {
+                    mScript.movesLeft--;
+                    isRage = true;
+                }
+                
+
 
 
 
@@ -362,6 +372,8 @@ public class UI : MonoBehaviour
         {
             case "Floyd":
                 fScript.movesLeft--;
+                maryButton.interactable = true;
+                gabrielButton.interactable = true;
                 audioSource.clip = floydMove1SFX;
                 audioSource.Play();
                 
@@ -381,13 +393,14 @@ public class UI : MonoBehaviour
                 //take hp from enemy (-5)
                 break;
             case "Gabriel":
+                gabrielButton.GetComponent<Image>().sprite = gMove1;
                 gScript.movesLeft--;
                 maryButton.interactable = true;
                 floydButton.interactable = true;
                 audioSource.clip = gabrielMove1SFX;
                 audioSource.Play();
 
-                gabrielButton.GetComponent<Image>().sprite = gMove1;
+                
 
                 if (selectedEnemy == "Enemy1")
                 {
@@ -413,15 +426,36 @@ public class UI : MonoBehaviour
 
                 if (selectedEnemy == "Enemy1")
                 {
-                    enemy1Scr.TakeDamage(25);
+                    if (isRage == true)
+                    {
+                        enemy1Scr.TakeDamage(35);
+                    }
+                    else
+                    {
+                        enemy1Scr.TakeDamage(25);
+                    }
                 }
                 if (selectedEnemy == "Enemy2")
                 {
-                    enemy2Scr.TakeDamage(25);
+                    if (isRage == true)
+                    {
+                        enemy2Scr.TakeDamage(35);
+                    }
+                    else
+                    {
+                        enemy2Scr.TakeDamage(25);
+                    }
                 }
                 if (selectedEnemy == "Enemy3")
                 {
-                    enemy3Scr.TakeDamage(25);
+                    if (isRage == true)
+                    {
+                        enemy3Scr.TakeDamage(35);
+                    }
+                    else
+                    {
+                        enemy3Scr.TakeDamage(25);
+                    }
                 }
 
                 //take hp from enemy (-25)
@@ -449,6 +483,8 @@ public class UI : MonoBehaviour
                     fScript.movesLeft--;
                     audioSource.clip = floydMove2SFX;
                     audioSource.Play();
+
+                    //
                 }
                 
 
@@ -465,9 +501,10 @@ public class UI : MonoBehaviour
 
                 else
                 {
+                    gabrielButton.GetComponent<Image>().sprite = gMove2;
                     gScript.movesLeft--;
 
-                    gabrielButton.GetComponent<Image>().sprite = gMove2;
+                    
 
                     gScript.GainMana(-10);
                     audioSource.clip = gabrielMove2SFX;
@@ -565,6 +602,8 @@ public class UI : MonoBehaviour
 
         nextWave();
 
+        nextLevel();
+
         gabrielButton.GetComponent<Image>().sprite = gStanding;
 
         specialErrorText.text = " ";
@@ -586,7 +625,6 @@ public class UI : MonoBehaviour
             gScript.movesLeft += 1;
             fScript.movesLeft += 1;
             mScript.movesLeft += 1;
-            nextWave();
 
             gScript.GainMana(10);
             mScript.GainMana(10);
@@ -595,6 +633,16 @@ public class UI : MonoBehaviour
             enemy1Scr.GainMana(10);
             enemy2Scr.GainMana(10);
             enemy3Scr.GainMana(10);
+
+            if(isRage == true)
+            {
+                countRageRounds += 1;
+                if (countRageRounds >= 2)
+                {
+                    isRage = false;
+                    countRageRounds = 0;
+                }
+            }
         }
     }
 
@@ -954,11 +1002,29 @@ public class UI : MonoBehaviour
 
     }
 
-
     public void nextWave()
     {
-            currentWave += 1;
-            Invoke("checkEnemy", 1.0f);
+        currentWave += 1;
+        Invoke("checkEnemy", 1.0f);
+        enemy1Scr.changeMana();
+        enemy2Scr.changeMana();
+        enemy3Scr.changeMana();
+    }
+
+    public void nextLevel()
+    {
+        if(currentWave == 3 && sceneName != "LevelThree")
+        {
+            currentWave = 0;
+            if (sceneName == "ShaniahScene")
+            {
+                SceneManager.LoadScene("LevelTwo");
+            }
+            if (sceneName == "LevelTwo")
+            {
+                SceneManager.LoadScene("LevelThree");
+            }
+        }
     }
 
     public void checkEnemy()
@@ -1028,5 +1094,4 @@ public class UI : MonoBehaviour
             }
         }
     }
-
 }
