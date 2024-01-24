@@ -474,6 +474,9 @@ public class UI : MonoBehaviour
                 if(fScript.currentMana < 5)
                 {
                     moveErrorText.text = "Not enough mana";
+                    floydButton.interactable = true;
+                    gabrielButton.interactable = true;
+                    maryButton.interactable = true;
                 }
 
                 else
@@ -500,6 +503,9 @@ public class UI : MonoBehaviour
                 if(gScript.currentMana < 10)
                 {
                     moveErrorText.text = "Not enough mana";
+                    floydButton.interactable = true;
+                    gabrielButton.interactable = true;
+                    maryButton.interactable = true;
                 }
 
                 else
