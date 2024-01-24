@@ -4118,7 +4118,7 @@ MonoBehaviour:
   activeChar: 
   selectedEnemy: 
   currentRound: 1
-  currentWave: 1
+  currentWave: 0
   scene:
     m_Handle: 0
   sceneName: 
@@ -4144,6 +4144,8 @@ MonoBehaviour:
   maryMove1SFX: {fileID: 8300000, guid: 3c135ddb71f494e4f8bc2c230834c0cd, type: 3}
   maryMove2SFX: {fileID: 8300000, guid: 5aefa2ae7b659884794d0bc80dacec68, type: 3}
   maryMoveSpecialSFX: {fileID: 8300000, guid: 65a4a70042276d34f8116c29f945d47f, type: 3}
+  isRage: 0
+  countRageRounds: 0
 --- !u!82 &637766999
 AudioSource:
   m_ObjectHideFlags: 0

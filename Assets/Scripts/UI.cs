@@ -47,6 +47,7 @@ public class UI : MonoBehaviour
     //Active Character and Enemy
     public string activeChar;
     public string selectedEnemy;
+    public string selectedAlly;
       //get enemy script 
 
     //Round & Scene Manager
@@ -101,7 +102,7 @@ public class UI : MonoBehaviour
     {
         gabrielButton.GetComponent<Image>().sprite = gStanding;
         audioSource = GetComponent<AudioSource>();
-        nextWave();
+        //nextWave();
         scene = SceneManager.GetActiveScene();
         sceneName = scene.name;
 
@@ -484,7 +485,12 @@ public class UI : MonoBehaviour
                     audioSource.clip = floydMove2SFX;
                     audioSource.Play();
 
-                    //
+                    Debug.Log("Heal");
+
+                    mScript.TakeDamage(-10);
+                    gScript.TakeDamage(-5);
+
+                    
                 }
                 
 
@@ -575,7 +581,6 @@ public class UI : MonoBehaviour
 
                     fScript.GainMana(-5);
                 }
-                
 
                 // -15HP , -5MP
                 break;
@@ -600,7 +605,7 @@ public class UI : MonoBehaviour
 
         nextRound();
 
-        nextWave();
+        //nextWave(); //SOMETHINGS UP WITH THIS
 
         nextLevel();
 
@@ -633,8 +638,10 @@ public class UI : MonoBehaviour
             enemy1Scr.GainMana(10);
             enemy2Scr.GainMana(10);
             enemy3Scr.GainMana(10);
+            
 
-            if(isRage == true)
+
+            if (isRage == true)
             {
                 countRageRounds += 1;
                 if (countRageRounds >= 2)
@@ -643,6 +650,11 @@ public class UI : MonoBehaviour
                     countRageRounds = 0;
                 }
             }
+        }
+
+        if (enemy1Scr.movesLeft == 0 && enemy1Scr.movesLeft == 0 && enemy1Scr.movesLeft == 0)
+        {
+            Debug.Log("Hey");
         }
     }
 
@@ -1004,6 +1016,7 @@ public class UI : MonoBehaviour
 
     public void nextWave()
     {
+
         currentWave += 1;
         Invoke("checkEnemy", 1.0f);
         enemy1Scr.changeMana();
