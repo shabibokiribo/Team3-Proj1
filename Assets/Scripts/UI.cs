@@ -102,7 +102,7 @@ public class UI : MonoBehaviour
     {
         gabrielButton.GetComponent<Image>().sprite = gStanding;
         audioSource = GetComponent<AudioSource>();
-        //nextWave();
+        nextWave();
         scene = SceneManager.GetActiveScene();
         sceneName = scene.name;
 
@@ -136,10 +136,7 @@ public class UI : MonoBehaviour
  
         }
 
-        if (enemy1Scr.currentHealth <= 0 && enemy2Scr.currentHealth <= 0 && enemy3Scr.currentHealth <= 0)
-        {
-            nextWave();
-        }
+        
     }
 
     
@@ -605,7 +602,7 @@ public class UI : MonoBehaviour
 
         nextRound();
 
-        //nextWave(); //SOMETHINGS UP WITH THIS
+        nextWave();
 
         nextLevel();
 
@@ -1016,12 +1013,14 @@ public class UI : MonoBehaviour
 
     public void nextWave()
     {
-
-        currentWave += 1;
-        Invoke("checkEnemy", 1.0f);
-        enemy1Scr.changeMana();
-        enemy2Scr.changeMana();
-        enemy3Scr.changeMana();
+        if (enemy1Scr.currentHealth <= 0 && enemy2Scr.currentHealth <= 0 && enemy3Scr.currentHealth <= 0)
+        {
+            currentWave += 1;
+            Invoke("resetCheckEnemy", 1.0f);
+            enemy1Scr.changeMana();
+            enemy2Scr.changeMana();
+            enemy3Scr.changeMana();
+        }
     }
 
     public void nextLevel()
