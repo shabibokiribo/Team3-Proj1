@@ -469,7 +469,7 @@ public class UI : MonoBehaviour
 
             
         }
-        TurnReset();
+        Invoke("TurnReset", .5f);
     }
 
     public void OnClickMove2()
@@ -557,7 +557,7 @@ public class UI : MonoBehaviour
 
                 break;
         }
-        TurnReset();
+        Invoke("TurnReset",.5f);
     }
 
     public void OnClickMove3()
@@ -601,7 +601,7 @@ public class UI : MonoBehaviour
                 Debug.Log("No Move");
                 break;
         }
-        TurnReset();
+        Invoke("TurnReset", .5f);
     }
 
     public void TurnReset()
@@ -619,7 +619,7 @@ public class UI : MonoBehaviour
 
         nextLevel();
 
-        //gabrielButton.GetComponent<Image>().sprite = gStanding; //invoke blah blah blah
+        gabrielButton.GetComponent<Image>().sprite = gStanding; //invoke blah blah blah
 
         specialErrorText.text = " ";
         moveErrorText.text = " ";
@@ -1052,13 +1052,7 @@ public class UI : MonoBehaviour
         }
     }
 
-    public void checkEnemy()
-    {
-        enemy1Scr.isChecked = true;
-        enemy2Scr.isChecked = true; 
-        enemy3Scr.isChecked = true;
-        Invoke("resetCheckEnemy", 1.0f);
-    }
+    
 
     public void resetCheckEnemy()
     {
