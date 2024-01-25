@@ -99,6 +99,8 @@ public class UI : MonoBehaviour
     public bool isRage = false;
     public int countRageRounds = 0;
 
+    public TMP_Text specialDescription;
+
     //public string currentAlly
 
     //MAKE THE MANA CHANGE BASED ON ROUND
@@ -147,7 +149,32 @@ public class UI : MonoBehaviour
  
         }
 
-        
+        if(activeChar == "Gabriel")
+        {
+            specialDescription.text = "Powerful flame attack (-35HP)";
+        }
+
+        if (activeChar == "Floyd")
+        {
+            specialDescription.text = "A mass heal on the party (+25HP)";
+        }
+
+        if (activeChar == "Mary")
+        {
+            specialDescription.text = "A Rage that increases damage for 2 rounds";
+        }
+
+        if(gScript.currentHealth <= 0 && fScript.currentHealth <= 0 && mScript.currentHealth <= 0)
+        {
+            SceneManager.LoadScene("Lose");
+        }
+
+        if(enemy1Scr.beatBoss == true)
+        {
+            SceneManager.LoadScene("Win");
+        }
+
+
     }
 
     
@@ -262,6 +289,15 @@ public class UI : MonoBehaviour
         audioSource.Play();
         selection.gameObject.SetActive(false);
         items.gameObject.SetActive(true);
+    }
+    
+    public void OnClickSpecialSelection()
+    {
+        audioSource.clip = selectSFX;
+        audioSource.Play();
+        selection.gameObject.SetActive(false);
+        special.gameObject.SetActive(true);
+
     }
 
     public void OnClickSpecial()
@@ -492,8 +528,6 @@ public class UI : MonoBehaviour
                 {
                     moveErrorText.text = "Not enough mana";
                     floydButton.interactable = true;
-                    gabrielButton.interactable = true;
-                    maryButton.interactable = true;
                 }
 
                 else
@@ -521,6 +555,7 @@ public class UI : MonoBehaviour
                 if(gScript.currentMana < 10)
                 {
                     moveErrorText.text = "Not enough mana";
+                    gabrielButton.interactable = true;
                 }
 
                 else
@@ -582,6 +617,7 @@ public class UI : MonoBehaviour
                 if (fScript.currentMana > 5)
                 {
                     moveErrorText.text = "Not enough mana";
+                    floydButton.interactable = true;
                 }
 
                 else
@@ -640,6 +676,11 @@ public class UI : MonoBehaviour
         specialErrorText.text = " ";
         moveErrorText.text = " ";
         potionErrorText.text = " ";
+
+        if(enemy1Scr.currentHealth <= 0 && enemy1Scr.enemyName == "Cerebus")
+        {
+            enemy1Scr.beatBoss = true;
+        }
 
     }
 

@@ -52,6 +52,8 @@ public class Enemy : MonoBehaviour
     public Sprite volcano;
     public Sprite cerebus;
 
+    public bool beatBoss = false;
+
 
     //public Sprite angel1;
     // public Sprite angel2;
@@ -277,6 +279,8 @@ public class Enemy : MonoBehaviour
                     //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
                     isChecked = true;
+
+
                 }
             }
         }
