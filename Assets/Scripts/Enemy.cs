@@ -245,7 +245,7 @@ public class Enemy : MonoBehaviour
     {
         //currentMana += 10;
 
-        currentMana -= mana;
+        currentMana += mana;
 
         manaBar.SetMana(currentMana); //update mana bar to match the character's current mana status
     }

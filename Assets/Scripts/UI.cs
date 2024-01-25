@@ -64,6 +64,13 @@ public class UI : MonoBehaviour
     public Sprite gMove2;
     public Sprite gSpecial;
 
+    public Sprite mStanding;
+    public Sprite mAttack;
+
+    public Sprite fStanding;
+    public Sprite fAttack;
+    public Sprite fSpecial;
+
     public int randomMove;
 
     public bool multi = false;
@@ -612,7 +619,7 @@ public class UI : MonoBehaviour
 
         nextLevel();
 
-        gabrielButton.GetComponent<Image>().sprite = gStanding;
+        //gabrielButton.GetComponent<Image>().sprite = gStanding; //invoke blah blah blah
 
         specialErrorText.text = " ";
         moveErrorText.text = " ";
