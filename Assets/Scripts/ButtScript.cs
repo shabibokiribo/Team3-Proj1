@@ -7,16 +7,18 @@ public class ButtScript : MonoBehaviour
 {
     public AudioSource audioSource;
     private string sceneName;
-    public bool sceneTransition = false;
+    public Animator transition;
+    public float transitionTime = 1f;
+
 
     IEnumerator PlayAudioAndLoadScene()
     {
         // Play AudioSource
         audioSource.Play();
-        // Set sceneTransition true
-        sceneTransition = true;
+        // Set trigger
+        transition.SetTrigger("Start");
         // Wait for half a second
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(transitionTime);
 
         // Load your scene
         SceneManager.LoadScene(sceneName);

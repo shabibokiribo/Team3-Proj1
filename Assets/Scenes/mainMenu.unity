@@ -1080,7 +1080,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1078406917
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1170,7 +1170,7 @@ CanvasGroup:
   m_Enabled: 1
   m_Alpha: 1
   m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &1273986417
 GameObject:
@@ -1202,6 +1202,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSource: {fileID: 2142534268}
+  transition: {fileID: 1078406920}
+  transitionTime: 1
 --- !u!4 &1273986419
 Transform:
   m_ObjectHideFlags: 0
