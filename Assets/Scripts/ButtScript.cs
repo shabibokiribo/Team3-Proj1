@@ -26,7 +26,7 @@ public class ButtScript : MonoBehaviour
 
     public void OnClickStart()
     {
-        sceneName = "ShaniahScene";
+        sceneName = "Backstory";
         StartCoroutine(PlayAudioAndLoadScene());
     }
 
