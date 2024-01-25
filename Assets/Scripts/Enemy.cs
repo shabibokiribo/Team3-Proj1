@@ -59,182 +59,177 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isChecked == false)
+        if (gm.sceneName == "ShaniahScene") //Angels
         {
 
-
-            if (gm.sceneName == "ShaniahScene") //Angels
+            if (gm.currentWave == 1)
             {
+                enemyName = "Angel";
 
-                if (gm.currentWave == 1)
-                {
-                    enemyName = "Angel";
+                move1 = "Angel Main Attack"; //-10HP to one character
+                move2 = "Angel Heavy Attack"; //-20HP to one character
+                special = "Angel Beam"; //-5 HP to all of party, -40MP
 
-                    move1 = "Angel Main Attack"; //-10HP to one character
-                    move2 = "Angel Heavy Attack"; //-20HP to one character
-                    special = "Angel Beam"; //-5 HP to all of party, -40MP
+                hp = 40;
+                mp = 40;
 
-                    hp = 40;
-                    mp = 40;
+                currentHealth = hp;
 
-                    currentHealth = hp;
+                healthBar.SetMaxHealth(hp); //set Angel's max health to hp (100)
 
-                    healthBar.SetMaxHealth(hp); //set Angel's max health to hp (100)
+                manaBar.SetMaxMana(40); //set Angel's max mana to 40
 
-                    manaBar.SetMaxMana(40); //set Angel's max mana to 40
+                //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
-                    //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
-
-                    isChecked = true;
-
-
-                }
-
-                if (gm.currentWave == 2) //Cherubs
-                {
-                    enemyName = "Cherub";
-
-                    //.GetComponent<Image>().sprite = gStanding;
-
-                    move1 = "Cherub Main Attack"; //-5HP to one character
-                    move2 = "Cherub Heavy Attack"; //-10HP to one character
-                    special = "Cherub's Arrows"; //-15 HP to all of party, -40MP
-
-                    hp = 40;
-                    mp = 40;
-
-                    currentHealth = hp;
-
-                    healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
-
-                    manaBar.SetMaxMana(40); //set Angel's max mana to 40
-
-                    //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
-
-                    isChecked = true;
-
-                }
-
-            }
-
-
-            if (gm.sceneName == "LevelTwo")
-            {
-                if (gm.currentWave == 1) //Hula Dancers
-                {
-                    enemyName = "Hula Dancer";
-
-                    move1 = "Hip Bump"; //-10HP
-                    move2 = "Spin Attack"; //-15HP
-                    special = "Fire Dance"; //-15HP to all enemies, -50MP
-
-                    hp = 50;
-                    mp = 50;
-
-                    currentHealth = hp;
-
-                    healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
-
-                    manaBar.SetMaxMana(50); //set Hula Dancer's max mana to 50
-
-                    //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
-
-                    isChecked = true;
-
-                }
-
-                if (gm.currentWave == 2) //Coconut Tree
-                {
-                    enemyName = "Coconut Tree";
-
-                    move1 = "Coconut Launch"; //-15HP
-                    move2 = "Speedy Coconut Launch"; //-20HP 
-                    special = "Void Coconut"; //-35HP -30MP
-
-                    hp = 75;
-                    mp = 40;
-
-                    currentHealth = hp;
-
-                    healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
-
-                    manaBar.SetMaxMana(40); //set Coconut Tree's max mana to 40
-
-                    //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
-
-                    isChecked = true;
-
-                }
+                isChecked = true;
 
 
             }
 
-            if (gm.sceneName == "LevelThree")
+            if(gm.currentWave == 2) //Cherubs
             {
-                if (gm.currentWave == 1)
-                {
-                    enemyName = "Demon";
+                enemyName = "Cherub";
 
-                    move1 = "Pitchfork Stab"; //-10HP
-                    move2 = "Flaming Pitchfork"; //-30HP
-                    special = "Flaming Riff"; //-25HP from all players, 40MP
+                //.GetComponent<Image>().sprite = gStanding;
 
-                    hp = 40;
-                    mp = 60;
+                move1 = "Cherub Main Attack"; //-5HP to one character
+                move2 = "Cherub Heavy Attack"; //-10HP to one character
+                special = "Cherub's Arrows"; //-15 HP to all of party, -40MP
 
-                    currentHealth = hp;
+                hp = 40;
+                mp = 40;
 
-                    healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
+                currentHealth = hp;
 
-                    manaBar.SetMaxMana(60); //set Demon's max mana to 60
+                healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
 
-                    //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+                manaBar.SetMaxMana(40); //set Angel's max mana to 40
 
-                    isChecked = true;
-                }
+                //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
-                if (gm.currentWave == 2)
-                {
-                    enemyName = "Volcano";
+                isChecked = true;
 
-                    move1 = "Bubble Over"; //-15HP
-                    special = "Erupt"; //-35HP to all party, 30MP
+            }
+            
+        }
 
-                    hp = 50;
-                    mp = 30;
 
-                    currentHealth = hp;
+        if (gm.sceneName == "LevelTwo")
+        {
+            if(gm.currentWave == 1) //Hula Dancers
+            {
+                enemyName = "Hula Dancer";
 
-                    healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
+                move1 = "Hip Bump"; //-10HP
+                move2 = "Spin Attack"; //-15HP
+                special = "Fire Dance"; //-15HP to all enemies, -50MP
 
-                    manaBar.SetMaxMana(30); //set Volcano's max mana to 30
+                hp = 50;
+                mp = 50;
 
-                    //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+                currentHealth = hp;
 
-                    isChecked = true;
-                }
+                healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
 
-                if (gm.currentWave == 3)
-                {
-                    enemyName = "Cerberus";
+                manaBar.SetMaxMana(50); //set Hula Dancer's max mana to 50
 
-                    move1 = "Bite"; //-25HP
-                    move2 = "Snap"; //-35HP
-                    special = "Tail Whip"; //-35HP to all enemies -40MP
+                //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
 
-                    hp = 100;
-                    mp = 40;
+                isChecked = true;
 
-                    currentHealth = hp;
+            }
 
-                    healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
+            if(gm.currentWave == 2) //Coconut Tree
+            {
+                enemyName = "Coconut Tree";
 
-                    manaBar.SetMaxMana(40); //set Cerberus's max mana to 40
+                move1 = "Coconut Launch"; //-15HP
+                move2 = "Speedy Coconut Launch"; //-20HP 
+                special = "Void Coconut"; //-35HP -30MP
 
-                    //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+                hp = 75;
+                mp = 40;
 
-                    isChecked = true;
-                }
+                currentHealth = hp;
+
+                healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
+
+                manaBar.SetMaxMana(40); //set Coconut Tree's max mana to 40
+
+                //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+
+                isChecked = true;
+
+            }
+            
+
+        }
+
+        if (gm.sceneName == "LevelThree")
+        {
+            if(gm.currentWave == 1)
+            {
+                enemyName = "Demon";
+
+                move1 = "Pitchfork Stab"; //-10HP
+                move2 = "Flaming Pitchfork"; //-30HP
+                special = "Flaming Riff"; //-25HP from all players, 40MP
+
+                hp = 40;
+                mp = 60;
+
+                currentHealth = hp;
+
+                healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
+
+                manaBar.SetMaxMana(60); //set Demon's max mana to 60
+
+                //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+
+                isChecked = true;
+            }
+
+            if(gm.currentWave == 2)
+            {
+                enemyName = "Volcano";
+
+                move1 = "Bubble Over"; //-15HP
+                special = "Erupt"; //-35HP to all party, 30MP
+
+                hp = 50;
+                mp = 30;
+
+                currentHealth = hp;
+
+                healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
+
+                manaBar.SetMaxMana(30); //set Volcano's max mana to 30
+
+                //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+
+                isChecked = true;
+            }
+
+            if(gm.currentWave == 3)
+            {
+                enemyName = "Cerberus";
+
+                move1 = "Bite"; //-25HP
+                move2 = "Snap"; //-35HP
+                special = "Tail Whip"; //-35HP to all enemies -40MP
+
+                hp = 100;
+                mp = 40;
+
+                currentHealth = hp;
+
+                healthBar.SetMaxHealth(hp); //set Gabriel's max health to hp (100)
+
+                manaBar.SetMaxMana(40); //set Cerberus's max mana to 40
+
+                //manaBar.CurrentValue(0); //set Mana to 0 at the begining of the game
+
+                isChecked = true;
             }
         }
     }
