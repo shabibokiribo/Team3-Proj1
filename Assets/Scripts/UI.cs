@@ -103,11 +103,15 @@ public class UI : MonoBehaviour
 
     //MAKE THE MANA CHANGE BASED ON ROUND
 
+    //POTIONS!
+
 
     // Start is called before the first frame update
     void Start()
     {
         gabrielButton.GetComponent<Image>().sprite = gStanding;
+        maryButton.GetComponent<Image>().sprite = mStanding;
+        floydButton.GetComponent<Image>().sprite = fStanding;
         audioSource = GetComponent<AudioSource>();
         nextWave();
         scene = SceneManager.GetActiveScene();
@@ -273,6 +277,7 @@ public class UI : MonoBehaviour
 
                 if(fScript.currentMana < 40)
                 {
+                    floydButton.interactable = true;
                     audioSource.clip = noManaSFX;
                     audioSource.Play();
                     specialErrorText.text = "Not Enough Mana";
@@ -280,6 +285,7 @@ public class UI : MonoBehaviour
 
                 else
                 {
+                    floydButton.GetComponent<Image>().sprite = fSpecial;
                     audioSource.clip = floydMoveSpecialSFX;
                     audioSource.Play();
                     fScript.movesLeft--;
@@ -299,6 +305,7 @@ public class UI : MonoBehaviour
 
                 if (gScript.currentMana < 40)
                 {
+                    gabrielButton.interactable = true;
                     audioSource.clip = noManaSFX;
                     Debug.Log("Working as intended!");
                     audioSource.Play();
@@ -336,6 +343,7 @@ public class UI : MonoBehaviour
             case "Mary":
                 if (mScript.currentMana < 40)
                 {
+                    maryButton.interactable = true;
                     audioSource.clip = noManaSFX;
                     audioSource.Play();
                     specialErrorText.text = "Not enough mana";
@@ -376,6 +384,7 @@ public class UI : MonoBehaviour
         switch (activeChar)
         {
             case "Floyd":
+                floydButton.GetComponent<Image>().sprite = fAttack;
                 fScript.movesLeft--;
                 maryButton.interactable = true;
                 gabrielButton.interactable = true;
@@ -423,6 +432,7 @@ public class UI : MonoBehaviour
                 //take hp from enemy (-15)
                 break;
             case "Mary":
+                maryButton.GetComponent<Image>().sprite = mAttack;
                 mScript.movesLeft--;
                 floydButton.interactable = true;
                 gabrielButton.interactable = true;
@@ -488,6 +498,7 @@ public class UI : MonoBehaviour
 
                 else
                 {
+                    floydButton.GetComponent<Image>().sprite = fAttack;
                     fScript.movesLeft--;
                     audioSource.clip = floydMove2SFX;
                     audioSource.Play();
@@ -510,9 +521,6 @@ public class UI : MonoBehaviour
                 if(gScript.currentMana < 10)
                 {
                     moveErrorText.text = "Not enough mana";
-                    floydButton.interactable = true;
-                    gabrielButton.interactable = true;
-                    maryButton.interactable = true;
                 }
 
                 else
@@ -520,7 +528,11 @@ public class UI : MonoBehaviour
                     gabrielButton.GetComponent<Image>().sprite = gMove2;
                     gScript.movesLeft--;
 
-                    
+                    floydButton.interactable = true;
+                    gabrielButton.interactable = true;
+                    maryButton.interactable = true;
+
+
 
                     gScript.GainMana(-10);
                     audioSource.clip = gabrielMove2SFX;
@@ -544,6 +556,7 @@ public class UI : MonoBehaviour
 
                 break;
             case "Mary":
+                maryButton.GetComponent<Image>().sprite = mAttack;
                 mScript.movesLeft--;
                 //take hp from all enemies on board (-15)
                 floydButton.interactable = true;
@@ -573,6 +586,7 @@ public class UI : MonoBehaviour
 
                 else
                 {
+                    floydButton.GetComponent<Image>().sprite = fAttack;
                     fScript.movesLeft--;
                     audioSource.clip = floydMove3SFX;
                     audioSource.Play();
@@ -619,7 +633,9 @@ public class UI : MonoBehaviour
 
         nextLevel();
 
-        gabrielButton.GetComponent<Image>().sprite = gStanding; //invoke blah blah blah
+        gabrielButton.GetComponent<Image>().sprite = gStanding;
+        maryButton.GetComponent<Image>().sprite = mStanding;
+        floydButton.GetComponent<Image>().sprite = fStanding;
 
         specialErrorText.text = " ";
         moveErrorText.text = " ";
@@ -1112,5 +1128,6 @@ public class UI : MonoBehaviour
                 mScript.GainMana(5);
             }
         }
+        Invoke("TurnReset", .5f);
     }
 }
