@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
@@ -37,6 +38,10 @@ public class Enemy : MonoBehaviour
     public FloydScr fScr;
 
     public bool isChecked = false;
+
+    public Button enemy1Button;
+    public Button enemy2Button;
+    public Button enemy3Button;
 
 
     public Sprite angel;
@@ -77,6 +82,10 @@ public class Enemy : MonoBehaviour
 
                 if (gm.currentWave == 1)
                 {
+                    enemy1Button.GetComponent<Image>().sprite = angel;
+                    enemy2Button.GetComponent<Image>().sprite = angel;
+                    enemy3Button.GetComponent<Image>().sprite = angel;
+
                     enemyName = "Angel";
 
                     move1 = "Angel Main Attack"; //-10HP to one character
@@ -101,6 +110,10 @@ public class Enemy : MonoBehaviour
 
                 if (gm.currentWave == 2) //Cherubs
                 {
+                    enemy1Button.GetComponent<Image>().sprite = cherub;
+                    enemy2Button.GetComponent<Image>().sprite = cherub;
+                    enemy3Button.GetComponent<Image>().sprite = cherub;
+
                     enemyName = "Cherub";
 
                     //.GetComponent<Image>().sprite = gStanding;
@@ -131,6 +144,10 @@ public class Enemy : MonoBehaviour
             {
                 if (gm.currentWave == 1) //Hula Dancers
                 {
+                    enemy1Button.GetComponent<Image>().sprite = hulaDancer;
+                    enemy2Button.GetComponent<Image>().sprite = hulaDancer;
+                    enemy3Button.GetComponent<Image>().sprite = hulaDancer;
+
                     enemyName = "Hula Dancer";
 
                     move1 = "Hip Bump"; //-10HP
@@ -154,6 +171,10 @@ public class Enemy : MonoBehaviour
 
                 if (gm.currentWave == 2) //Coconut Tree
                 {
+                    enemy1Button.GetComponent<Image>().sprite = tree;
+                    enemy2Button.GetComponent<Image>().sprite = tree;
+                    enemy3Button.GetComponent<Image>().sprite = tree;
+
                     enemyName = "Coconut Tree";
 
                     move1 = "Coconut Launch"; //-15HP
@@ -182,6 +203,10 @@ public class Enemy : MonoBehaviour
             {
                 if (gm.currentWave == 1)
                 {
+                    enemy1Button.GetComponent<Image>().sprite = demon;
+                    enemy2Button.GetComponent<Image>().sprite = demon;
+                    enemy3Button.GetComponent<Image>().sprite = demon;
+
                     enemyName = "Demon";
 
                     move1 = "Pitchfork Stab"; //-10HP
@@ -204,6 +229,10 @@ public class Enemy : MonoBehaviour
 
                 if (gm.currentWave == 2)
                 {
+                    enemy1Button.GetComponent<Image>().sprite = volcano;
+                    enemy2Button.GetComponent<Image>().sprite = volcano;
+                    enemy3Button.GetComponent<Image>().sprite = volcano;
+
                     enemyName = "Volcano";
 
                     move1 = "Bubble Over"; //-15HP
@@ -225,6 +254,11 @@ public class Enemy : MonoBehaviour
 
                 if (gm.currentWave == 3)
                 {
+                    enemy1Button.GetComponent<Image>().sprite = cerebus;
+                    enemy2Button.interactable = false;
+                    enemy3Button.interactable = false;
+
+
                     enemyName = "Cerberus";
 
                     move1 = "Bite"; //-25HP
