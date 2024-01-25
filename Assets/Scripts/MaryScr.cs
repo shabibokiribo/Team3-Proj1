@@ -43,7 +43,10 @@ public class MaryScr : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+        if (Input.GetKeyDown("space"))
+        {
+            GainMana(10);
+        }
     }
 
     public void TakeDamage(int damage) //take a certain amount of damage
@@ -57,7 +60,7 @@ public class MaryScr : MonoBehaviour
     {
         //currentMana += 10;
 
-        currentMana -= mana;
+        currentMana += mana;
 
         manaBar.SetMana(currentMana); //update mana bar to match the character's current mana status
     }
