@@ -23,7 +23,13 @@ public class TempDialogue : MonoBehaviour
     public AudioClip sixClip;
     public AudioClip sevenClip;
 
-    public AudioSource source;
+    public AudioSource source1;
+    public AudioSource source2;
+    public AudioSource source3;
+    public AudioSource source4;
+    public AudioSource source5;
+    public AudioSource source6;
+    public AudioSource source7;
 
 
     public TMP_Text dialogue;
@@ -33,76 +39,106 @@ public class TempDialogue : MonoBehaviour
     public Sprite gabriel;
     public Sprite floyd;
 
-    public int index = 1;
+    public int index;
+
+    public bool check = false;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        index = 0;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (index == 1)
-        {
-            source.clip = oneClip;
-            image.sprite = gabriel;
-            dialogue.text = one;
-
-        }
-        if (index == 2)
-        {
-            source.clip = twoClip;
-            image.sprite = floyd;
-            dialogue.text = two;
-
-        }
-        if (index == 3)
-        {
-            source.clip = twoClip;
-            image.sprite = mary;
-            dialogue.text = three;
-
-        }
-        if (index == 4)
-        {
-            source.clip = fourClip;
-            image.sprite = floyd;
-            dialogue.text = four;
-
-        }
-        if (index == 5)
-        {
-            source.clip = fiveClip;
-            image.sprite = gabriel;
-            dialogue.text = five;
-
-        }
-        if (index == 6)
-        {
-            source.clip = sixClip;
-            image.sprite = floyd;
-            dialogue.text = six;
-
-        }
-        if (index == 7)
-        {
-            source.clip = sevenClip;
-            image.sprite = mary;
-            dialogue.text = seven;
-
-        }
-        if (index == 8)
-        {
-            SceneManager.LoadScene("ShaniahScene");
-
-        }
+        //ControlAudio();
     }
 
     public void OnClickNext()
     {
         index++;
+        ControlAudio();
+        //Invoke("ResetCheck", 1f);
+        //check = true;
+    }
+
+    public void ControlAudio() 
+    {
+        
+            if (index == 1)
+            {
+                source1.clip = oneClip;
+                image.sprite = gabriel;
+                dialogue.text = one;
+                source1.Play();
+
+            }
+            if (index == 2)
+            {
+                source2.clip = twoClip;
+                image.sprite = floyd;
+                dialogue.text = two;
+                source2.Play();
+
+            }
+            if (index == 3)
+            {
+                source3.clip = threeClip;
+                image.sprite = mary;
+                dialogue.text = three;
+                source3.Play();
+
+            }
+            if (index == 4)
+            {
+                source4.clip = fourClip;
+                image.sprite = floyd;
+                dialogue.text = four;
+                source4.Play();
+
+            }
+            if (index == 5)
+            {
+                source5.clip = fiveClip;
+                image.sprite = gabriel;
+                dialogue.text = five;
+                source5.Play();
+
+            }
+            if (index == 6)
+            {
+                source6.clip = sixClip;
+                image.sprite = floyd;
+                dialogue.text = six;
+                source6.Play();
+
+            }
+            if (index == 7)
+            {
+                source7.clip = sevenClip;
+                image.sprite = mary;
+                dialogue.text = seven;
+                source7.Play();
+
+            }
+            if (index == 8)
+            {
+                Invoke("LoadIt", .5f);
+
+            }
+        
+    }
+
+    public void ResetCheck()
+    {
+        check = false;
+    }
+
+    public void LoadIt()
+    {
+        SceneManager.LoadScene("ShaniahScene");
     }
 }

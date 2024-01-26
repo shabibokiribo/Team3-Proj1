@@ -174,6 +174,18 @@ public class UI : MonoBehaviour
             SceneManager.LoadScene("Win");
         }
 
+        if (enemy1Scr.currentHealth > 0)
+        {
+            enemy1Scr.enemy1Button.interactable = true;
+        }
+        if (enemy2Scr.currentHealth > 0)
+        {
+            enemy2Scr.enemy2Button.interactable = true;
+        }
+        if (enemy3Scr.currentHealth > 0)
+        {
+            enemy3Scr.enemy3Button.interactable = true;
+        }
 
     }
 
@@ -542,6 +554,7 @@ public class UI : MonoBehaviour
                     mScript.TakeDamage(-10);
                     gScript.TakeDamage(-5);
 
+                    floydButton.interactable = true;
                     
                 }
                 
@@ -677,7 +690,19 @@ public class UI : MonoBehaviour
         moveErrorText.text = " ";
         potionErrorText.text = " ";
 
-        if(enemy1Scr.currentHealth <= 0 && enemy1Scr.enemyName == "Cerebus")
+        if(enemy1Scr.currentHealth <= 0)
+        {
+            enemy1Scr.enemy1Button.interactable = false;
+        }
+        if (enemy2Scr.currentHealth <= 0)
+        {
+            enemy2Scr.enemy2Button.interactable = false;
+        }
+        if (enemy3Scr.currentHealth <= 0)
+        {
+            enemy3Scr.enemy3Button.interactable = false;
+        }
+        if (enemy1Scr.currentHealth <= 0 && enemy1Scr.enemyName == "Cerebus")
         {
             enemy1Scr.beatBoss = true;
         }
@@ -1153,6 +1178,7 @@ public class UI : MonoBehaviour
                 audioSource.Play();
                 fScript.TakeDamage(-10);
                 fScript.GainMana(5);
+                floydButton.interactable = true;
             }
             if (activeChar == "Gabriel")
             {
@@ -1160,6 +1186,7 @@ public class UI : MonoBehaviour
                 audioSource.Play();
                 gScript.TakeDamage(-10);
                 gScript.GainMana(5);
+                gabrielButton.interactable = true;
             }
             if (activeChar == "Mary")
             {
@@ -1167,8 +1194,9 @@ public class UI : MonoBehaviour
                 audioSource.Play();
                 mScript.TakeDamage(-10);
                 mScript.GainMana(5);
+                maryButton.interactable = true;
             }
         }
-        Invoke("TurnReset", .5f);
+        //Invoke("TurnReset", .5f);
     }
 }

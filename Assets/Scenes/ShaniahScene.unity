@@ -1194,6 +1194,7 @@ MonoBehaviour:
   demon: {fileID: 21300000, guid: a45525a81df3dfb40afa7598dbd1d9c8, type: 3}
   volcano: {fileID: 21300000, guid: 04ba4db6dbaa5084e9d5e1b59bcbd95e, type: 3}
   cerebus: {fileID: 21300000, guid: 96c12d94d9340be4fb235cb88aca4780, type: 3}
+  beatBoss: 0
 --- !u!1 &159802052
 GameObject:
   m_ObjectHideFlags: 0
@@ -10790,6 +10791,7 @@ MonoBehaviour:
   demon: {fileID: 21300000, guid: a45525a81df3dfb40afa7598dbd1d9c8, type: 3}
   volcano: {fileID: 21300000, guid: 04ba4db6dbaa5084e9d5e1b59bcbd95e, type: 3}
   cerebus: {fileID: 21300000, guid: 96c12d94d9340be4fb235cb88aca4780, type: 3}
+  beatBoss: 0
 --- !u!114 &1692419201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13218,6 +13220,7 @@ MonoBehaviour:
   demon: {fileID: 21300000, guid: a45525a81df3dfb40afa7598dbd1d9c8, type: 3}
   volcano: {fileID: 21300000, guid: 04ba4db6dbaa5084e9d5e1b59bcbd95e, type: 3}
   cerebus: {fileID: 21300000, guid: 96c12d94d9340be4fb235cb88aca4780, type: 3}
+  beatBoss: 0
 --- !u!114 &2138339479
 MonoBehaviour:
   m_ObjectHideFlags: 0
