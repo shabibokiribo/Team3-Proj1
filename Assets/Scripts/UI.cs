@@ -187,6 +187,19 @@ public class UI : MonoBehaviour
             enemy3Scr.enemy3Button.interactable = true;
         }
 
+        if(mScript.currentHealth <= 0)
+        {
+            maryButton.interactable = false;
+        }
+        if (fScript.currentHealth <= 0)
+        {
+            floydButton.interactable = false;
+        }
+        if (gScript.currentHealth <= 0)
+        {
+            gabrielButton.interactable = false;
+        }
+
     }
 
     
