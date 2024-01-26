@@ -558,7 +558,7 @@ public class UI : MonoBehaviour
                 else
                 {
                     floydButton.GetComponent<Image>().sprite = fAttack;
-                    fScript.movesLeft--;
+                    //fScript.movesLeft--;
                     audioSource.clip = floydMove2SFX;
                     audioSource.Play();
 
@@ -568,7 +568,9 @@ public class UI : MonoBehaviour
                     gScript.TakeDamage(-5);
 
                     floydButton.interactable = true;
-                    
+                    gabrielButton.interactable = true;
+                    maryButton.interactable = true;
+
                 }
                 
 
