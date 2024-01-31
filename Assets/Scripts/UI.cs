@@ -164,7 +164,7 @@ public class UI : MonoBehaviour
             specialDescription.text = "A Rage that increases damage for 2 rounds";
         }
 
-        if(gScript.currentHealth <= 0 && fScript.currentHealth <= 0 && mScript.currentHealth <= 0)
+        if(gScript.currentHealth <= 0 || fScript.currentHealth <= 0 || mScript.currentHealth <= 0)
         {
             SceneManager.LoadScene("Lose");
         }
@@ -564,9 +564,13 @@ public class UI : MonoBehaviour
                 else
                 {
                     floydButton.GetComponent<Image>().sprite = fAttack;
-                    //fScript.movesLeft--;
+                    fScript.movesLeft--;
                     audioSource.clip = floydMove2SFX;
                     audioSource.Play();
+
+                    floydButton.interactable = true;
+                    gabrielButton.interactable = true;
+                    maryButton.interactable = true;
 
                     Debug.Log("Heal");
 
