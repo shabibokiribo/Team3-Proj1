@@ -350,6 +350,8 @@ public class UI : MonoBehaviour
                     audioSource.clip = floydMoveSpecialSFX;
                     audioSource.Play();
                     fScript.movesLeft--;
+                    maryButton.interactable = true;
+                    gabrielButton.interactable = true;
 
                     fScript.TakeDamage(-25);
                     gScript.TakeDamage(-25);
@@ -378,8 +380,10 @@ public class UI : MonoBehaviour
                     gabrielButton.GetComponent<Image>().sprite = gSpecial;
                     audioSource.PlayOneShot(gabrielMoveSpecialSFX);
                     gScript.movesLeft--;
+                    maryButton.interactable = true;
+                    floydButton.interactable = true;
 
-                    
+
 
                     if (selectedEnemy == "Enemy1")
                     {
@@ -413,6 +417,8 @@ public class UI : MonoBehaviour
                 else
                 {
                     mScript.movesLeft--;
+                    maryButton.interactable = true;
+                    gabrielButton.interactable = true;
                     isRage = true;
                 }
                 

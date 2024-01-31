@@ -1187,11 +1187,11 @@ MonoBehaviour:
   enemy1Button: {fileID: 158712240}
   enemy2Button: {fileID: 1692419201}
   enemy3Button: {fileID: 2138339479}
-  angel: {fileID: 21300000, guid: baa339b109b1dbb4090d4036836e0192, type: 3}
+  angel: {fileID: 21300000, guid: 20bf1fcc627659848a64065b1a538812, type: 3}
   cherub: {fileID: 21300000, guid: 2ceb0b4e57047a243aa6210a2e10a4be, type: 3}
   hulaDancer: {fileID: 21300000, guid: b7910aecf120afa41856f1e9a89966a3, type: 3}
-  tree: {fileID: 21300000, guid: 3de33e661786f2245b660fbe214dcbf9, type: 3}
-  demon: {fileID: 21300000, guid: a45525a81df3dfb40afa7598dbd1d9c8, type: 3}
+  tree: {fileID: 21300000, guid: e114adad45a0b7f43867f05f17c7484c, type: 3}
+  demon: {fileID: 21300000, guid: 3c732efe65acb4b42aa5f7aebff9ec0f, type: 3}
   volcano: {fileID: 21300000, guid: 04ba4db6dbaa5084e9d5e1b59bcbd95e, type: 3}
   cerebus: {fileID: 21300000, guid: 96c12d94d9340be4fb235cb88aca4780, type: 3}
   beatBoss: 0
@@ -10784,11 +10784,11 @@ MonoBehaviour:
   enemy1Button: {fileID: 158712240}
   enemy2Button: {fileID: 1692419201}
   enemy3Button: {fileID: 2138339479}
-  angel: {fileID: 21300000, guid: baa339b109b1dbb4090d4036836e0192, type: 3}
+  angel: {fileID: 21300000, guid: 20bf1fcc627659848a64065b1a538812, type: 3}
   cherub: {fileID: 21300000, guid: 37fafe1443cbad74a891c3961de71fe6, type: 3}
   hulaDancer: {fileID: 21300000, guid: b7910aecf120afa41856f1e9a89966a3, type: 3}
-  tree: {fileID: 21300000, guid: 3de33e661786f2245b660fbe214dcbf9, type: 3}
-  demon: {fileID: 21300000, guid: a45525a81df3dfb40afa7598dbd1d9c8, type: 3}
+  tree: {fileID: 21300000, guid: e114adad45a0b7f43867f05f17c7484c, type: 3}
+  demon: {fileID: 21300000, guid: 3c732efe65acb4b42aa5f7aebff9ec0f, type: 3}
   volcano: {fileID: 21300000, guid: 04ba4db6dbaa5084e9d5e1b59bcbd95e, type: 3}
   cerebus: {fileID: 21300000, guid: 96c12d94d9340be4fb235cb88aca4780, type: 3}
   beatBoss: 0
@@ -13213,11 +13213,11 @@ MonoBehaviour:
   enemy1Button: {fileID: 158712240}
   enemy2Button: {fileID: 1692419201}
   enemy3Button: {fileID: 2138339479}
-  angel: {fileID: 21300000, guid: baa339b109b1dbb4090d4036836e0192, type: 3}
+  angel: {fileID: 21300000, guid: 20bf1fcc627659848a64065b1a538812, type: 3}
   cherub: {fileID: 21300000, guid: 2ceb0b4e57047a243aa6210a2e10a4be, type: 3}
   hulaDancer: {fileID: 21300000, guid: b7910aecf120afa41856f1e9a89966a3, type: 3}
-  tree: {fileID: 21300000, guid: 3de33e661786f2245b660fbe214dcbf9, type: 3}
-  demon: {fileID: 21300000, guid: a45525a81df3dfb40afa7598dbd1d9c8, type: 3}
+  tree: {fileID: 21300000, guid: e114adad45a0b7f43867f05f17c7484c, type: 3}
+  demon: {fileID: 21300000, guid: 159050ce1bd448744b728d3db4f8e3f1, type: 3}
   volcano: {fileID: 21300000, guid: 04ba4db6dbaa5084e9d5e1b59bcbd95e, type: 3}
   cerebus: {fileID: 21300000, guid: 96c12d94d9340be4fb235cb88aca4780, type: 3}
   beatBoss: 0
