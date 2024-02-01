@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using 
 
 public class UI : MonoBehaviour
 {
@@ -213,6 +214,19 @@ public class UI : MonoBehaviour
         if (gScript.currentHealth <= 0)
         {
             gabrielButton.interactable = false;
+        }
+
+        if (Input.GetKeyDown(0))
+        {
+            if(sceneName == "ShaniahScene")
+            {
+                SceneManager.LoadScene("LevelTwo");
+            }
+            if (sceneName == "LevelTwo")
+            {
+                SceneManager.LoadScene("LevelThree");
+            }
+
         }
 
     }
