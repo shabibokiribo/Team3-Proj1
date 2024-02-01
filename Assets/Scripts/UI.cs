@@ -666,7 +666,7 @@ public class UI : MonoBehaviour
         {
             case "Floyd":
 
-                if (fScript.currentMana > 5)
+                if (fScript.currentMana < 5)
                 {
                     moveErrorText.text = "Not enough mana";
                     floydButton.interactable = true;
