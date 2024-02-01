@@ -1272,6 +1272,8 @@ public class UI : MonoBehaviour
                 fScript.TakeDamage(-10);
                 fScript.GainMana(5);
                 floydButton.interactable = true;
+                gabrielButton.interactable = true;
+                maryButton.interactable = true;
                 potionText.text = "Potions left: " + fScript.potions;
             }
             if (activeChar == "Gabriel")
@@ -1282,7 +1284,9 @@ public class UI : MonoBehaviour
                 audioSource.Play();
                 gScript.TakeDamage(-10);
                 gScript.GainMana(5);
+                floydButton.interactable = true;
                 gabrielButton.interactable = true;
+                maryButton.interactable = true;
                 potionText.text = "Potions left: " + gScript.potions;
             }
         }
