@@ -728,6 +728,7 @@ public class UI : MonoBehaviour
         specialErrorText.text = " ";
         moveErrorText.text = " ";
         potionErrorText.text = " ";
+        
 
         if(enemy1Scr.currentHealth <= 0)
         {
@@ -1207,6 +1208,7 @@ public class UI : MonoBehaviour
             audioSource.clip = noManaSFX;
             audioSource.Play();
             potionErrorText.text = "No potions";
+            potionText.text = "Potions left: " + 0;
         }
 
         else
@@ -1219,6 +1221,7 @@ public class UI : MonoBehaviour
                 fScript.TakeDamage(-10);
                 fScript.GainMana(5);
                 floydButton.interactable = true;
+                potionText.text = "Potions left: " + fScript.potions;
             }
             if (activeChar == "Gabriel")
             {
@@ -1228,6 +1231,7 @@ public class UI : MonoBehaviour
                 gScript.TakeDamage(-10);
                 gScript.GainMana(5);
                 gabrielButton.interactable = true;
+                potionText.text = "Potions left: " + gScript.potions;
             }
         }
         //Invoke("TurnReset", .5f);
