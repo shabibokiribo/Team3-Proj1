@@ -101,6 +101,8 @@ public class UI : MonoBehaviour
 
     public TMP_Text specialDescription;
 
+    public Button Move3Button;
+
     //public string currentAlly
 
     //MAKE THE MANA CHANGE BASED ON ROUND
@@ -306,6 +308,18 @@ public class UI : MonoBehaviour
         audioSource.Play();
         selection.gameObject.SetActive(false);
         moves.gameObject.SetActive(true);
+        if(activeChar == "Gabriel")
+        {
+            Move3Button.interactable = false;
+        }
+        if (activeChar == "Mary")
+        {
+            Move3Button.interactable = false;
+        }
+        if (activeChar == "Floyd")
+        {
+            Move3Button.interactable = true;
+        }
     }
 
     public void OnClickItem()
@@ -1199,6 +1213,7 @@ public class UI : MonoBehaviour
         {
             if(activeChar == "Floyd")
             {
+                fScript.potions--;
                 audioSource.clip = potionSFX;
                 audioSource.Play();
                 fScript.TakeDamage(-10);
@@ -1207,19 +1222,12 @@ public class UI : MonoBehaviour
             }
             if (activeChar == "Gabriel")
             {
+                gScript.potions--;
                 audioSource.clip = potionSFX;
                 audioSource.Play();
                 gScript.TakeDamage(-10);
                 gScript.GainMana(5);
                 gabrielButton.interactable = true;
-            }
-            if (activeChar == "Mary")
-            {
-                audioSource.clip = potionSFX;
-                audioSource.Play();
-                mScript.TakeDamage(-10);
-                mScript.GainMana(5);
-                maryButton.interactable = true;
             }
         }
         //Invoke("TurnReset", .5f);

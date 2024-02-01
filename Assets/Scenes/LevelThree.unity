@@ -4125,7 +4125,7 @@ MonoBehaviour:
   hulaDancer: {fileID: 21300000, guid: b7910aecf120afa41856f1e9a89966a3, type: 3}
   tree: {fileID: 21300000, guid: e114adad45a0b7f43867f05f17c7484c, type: 3}
   demon: {fileID: 21300000, guid: 3c732efe65acb4b42aa5f7aebff9ec0f, type: 3}
-  volcano: {fileID: 21300000, guid: 04ba4db6dbaa5084e9d5e1b59bcbd95e, type: 3}
+  volcano: {fileID: 21300000, guid: 4e71e539c68605341bf80745418ce114, type: 3}
   cerebus: {fileID: 21300000, guid: 96c12d94d9340be4fb235cb88aca4780, type: 3}
   beatBoss: 0
 --- !u!222 &577047703
@@ -8367,7 +8367,7 @@ MonoBehaviour:
   hulaDancer: {fileID: 21300000, guid: b7910aecf120afa41856f1e9a89966a3, type: 3}
   tree: {fileID: 21300000, guid: e114adad45a0b7f43867f05f17c7484c, type: 3}
   demon: {fileID: 21300000, guid: 3c732efe65acb4b42aa5f7aebff9ec0f, type: 3}
-  volcano: {fileID: 21300000, guid: 04ba4db6dbaa5084e9d5e1b59bcbd95e, type: 3}
+  volcano: {fileID: 21300000, guid: 4e71e539c68605341bf80745418ce114, type: 3}
   cerebus: {fileID: 21300000, guid: 96c12d94d9340be4fb235cb88aca4780, type: 3}
   beatBoss: 0
 --- !u!222 &1227533876
@@ -11907,7 +11907,7 @@ MonoBehaviour:
   cherub: {fileID: 21300000, guid: 2ceb0b4e57047a243aa6210a2e10a4be, type: 3}
   hulaDancer: {fileID: 21300000, guid: b7910aecf120afa41856f1e9a89966a3, type: 3}
   tree: {fileID: 21300000, guid: e114adad45a0b7f43867f05f17c7484c, type: 3}
-  demon: {fileID: 21300000, guid: 159050ce1bd448744b728d3db4f8e3f1, type: 3}
+  demon: {fileID: 21300000, guid: 4e71e539c68605341bf80745418ce114, type: 3}
   volcano: {fileID: 21300000, guid: 04ba4db6dbaa5084e9d5e1b59bcbd95e, type: 3}
   cerebus: {fileID: 21300000, guid: 96c12d94d9340be4fb235cb88aca4780, type: 3}
   beatBoss: 0
