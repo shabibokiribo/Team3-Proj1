@@ -1215,6 +1215,7 @@ public class UI : MonoBehaviour
         {
             if(activeChar == "Floyd")
             {
+                fScript.movesLeft--;
                 fScript.potions--;
                 audioSource.clip = potionSFX;
                 audioSource.Play();
@@ -1226,6 +1227,7 @@ public class UI : MonoBehaviour
             if (activeChar == "Gabriel")
             {
                 gScript.potions--;
+                gScript.movesLeft--;
                 audioSource.clip = potionSFX;
                 audioSource.Play();
                 gScript.TakeDamage(-10);
