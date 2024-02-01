@@ -3777,28 +3777,28 @@ MonoBehaviour:
   backSFX: {fileID: 8300000, guid: 826f86c36a22cce4a88a5708f4510808, type: 3}
   potionSFX: {fileID: 8300000, guid: 6d0ae9b7cae0d054896f2e8d77894d24, type: 3}
   gabrielMove1SFX: {fileID: 8300000, guid: bfb55e1701deca043a2aea046bbe07e6, type: 3}
-  gabrielAttack1VL: {fileID: 0}
+  gabrielAttack1VL: {fileID: 8300000, guid: 66f33dfef5b48024a9132d6c3df9a29f, type: 3}
   gabrielMove2SFX: {fileID: 8300000, guid: 719d64e4b6ea5654da740e283758fb47, type: 3}
-  gabrielAttack2VL: {fileID: 0}
+  gabrielAttack2VL: {fileID: 8300000, guid: 3e444bc6c71cc9d41abe8ca0f1e2ab40, type: 3}
   gabrielMoveSpecialSFX: {fileID: 8300000, guid: 74342aa91581e554880f7010fe92d936, type: 3}
-  gabrielMoveSpecialVL: {fileID: 0}
-  gabrielHurtVL: {fileID: 0}
+  gabrielMoveSpecialVL: {fileID: 8300000, guid: 193489189a843e940b8a50575fee1736, type: 3}
+  gabrielHurtVL: {fileID: 8300000, guid: 53b898fb752071f4ab9e03e62c386325, type: 3}
   floydMove1SFX: {fileID: 8300000, guid: fb416f72b7668134aa1ab5da6138b75b, type: 3}
-  floydAttack1VL: {fileID: 0}
+  floydAttack1VL: {fileID: 8300000, guid: 7fea805a9866c974686e7d8398ab947b, type: 3}
   floydMove2SFX: {fileID: 8300000, guid: a78a3ce24086af941a8006dbfb0d82be, type: 3}
-  floydAttack2VL: {fileID: 0}
+  floydAttack2VL: {fileID: 8300000, guid: 95743b6937f8e204aa92ad433635e214, type: 3}
   floydMove3SFX: {fileID: 8300000, guid: f30edf51fe0740e4abb134203d5e4fea, type: 3}
-  floydAttack3VL: {fileID: 0}
+  floydAttack3VL: {fileID: 8300000, guid: 6eb795ca1e16c74448aa3c671ceb8b1c, type: 3}
   floydMoveSpecialSFX: {fileID: 8300000, guid: a78a3ce24086af941a8006dbfb0d82be, type: 3}
-  floydMoveSpecialVL: {fileID: 0}
-  floydHurtVL: {fileID: 0}
+  floydMoveSpecialVL: {fileID: 8300000, guid: 4c4c574bf31e4c745bcd796b174a7d46, type: 3}
+  floydHurtVL: {fileID: 8300000, guid: 95743b6937f8e204aa92ad433635e214, type: 3}
   maryMove1SFX: {fileID: 8300000, guid: 3c135ddb71f494e4f8bc2c230834c0cd, type: 3}
-  maryAttack1VL: {fileID: 0}
+  maryAttack1VL: {fileID: 8300000, guid: c0ad2ad1e52455d4f98dda3c85088a4c, type: 3}
   maryMove2SFX: {fileID: 8300000, guid: 5aefa2ae7b659884794d0bc80dacec68, type: 3}
-  maryAttack2VL: {fileID: 0}
+  maryAttack2VL: {fileID: 8300000, guid: 6272d6f67b3dde642bbbbd9ddc1d8f03, type: 3}
   maryMoveSpecialSFX: {fileID: 8300000, guid: 65a4a70042276d34f8116c29f945d47f, type: 3}
-  maryMoveSpecialVL: {fileID: 0}
-  maryHurtVL: {fileID: 0}
+  maryMoveSpecialVL: {fileID: 8300000, guid: 84915e206d9722d459421470db7b3878, type: 3}
+  maryHurtVL: {fileID: 8300000, guid: 712e58018ca08d64ca64c8e5c1450291, type: 3}
   isRage: 0
   countRageRounds: 0
   specialDescription: {fileID: 686093013}

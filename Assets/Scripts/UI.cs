@@ -1280,6 +1280,7 @@ public class UI : MonoBehaviour
             {
                 gScript.potions--;
                 gScript.movesLeft--;
+                items.gameObject.SetActive(false);
                 audioSource.clip = potionSFX;
                 audioSource.Play();
                 gScript.TakeDamage(-10);
