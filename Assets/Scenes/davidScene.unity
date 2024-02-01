@@ -863,7 +863,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Max HP:'
+  m_text: 'Max HP: 130
+
+    Pound: 25DMG
+
+    Sweeping Blow: 15DMG
+
+    Rage: +5DMG,
+    +5DEF, 40MP for 2 turns'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d005819d663a744ca0a599646445b3f, type: 2}
   m_sharedMaterial: {fileID: -2372616206367322070, guid: 2d005819d663a744ca0a599646445b3f, type: 2}
@@ -890,8 +897,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -5503,7 +5510,14 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Max HP:'
+  m_text: 'Max HP: 100
+
+    Slash: 15DMG
+
+    Fire Slash: 20DMG 15MP
+
+    Flurry
+    of Blows: 35DMG 40MP'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d005819d663a744ca0a599646445b3f, type: 2}
   m_sharedMaterial: {fileID: -2372616206367322070, guid: 2d005819d663a744ca0a599646445b3f, type: 2}
@@ -5530,8 +5544,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -7392,7 +7406,16 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Max HP:'
+  m_text: 'Max HP: 75
+
+    Weak Attack: 5DMG
+
+    Heal: 25HP 5MP
+
+    Water Attack:
+    15DMG 5MP
+
+    Special: 25HP 40MP'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2d005819d663a744ca0a599646445b3f, type: 2}
   m_sharedMaterial: {fileID: -2372616206367322070, guid: 2d005819d663a744ca0a599646445b3f, type: 2}
@@ -7419,8 +7442,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 28
+  m_fontSizeBase: 28
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
