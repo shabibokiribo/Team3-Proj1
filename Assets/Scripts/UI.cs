@@ -84,17 +84,30 @@ public class UI : MonoBehaviour
     public AudioClip potionSFX;
     //GabrielSFX
     public AudioClip gabrielMove1SFX;
+    public AudioClip gabrielAttack1VL;
     public AudioClip gabrielMove2SFX;
+    public AudioClip gabrielAttack2VL;
     public AudioClip gabrielMoveSpecialSFX;
+    public AudioClip gabrielMoveSpecialVL;
+    public AudioClip gabrielHurtVL;
     //FloydSFX
     public AudioClip floydMove1SFX;
+    public AudioClip floydAttack1VL;
     public AudioClip floydMove2SFX;
+    public AudioClip floydAttack2VL;
     public AudioClip floydMove3SFX;
+    public AudioClip floydAttack3VL;
     public AudioClip floydMoveSpecialSFX;
+    public AudioClip floydMoveSpecialVL;
+    public AudioClip floydHurtVL;
     //MarySFX
     public AudioClip maryMove1SFX;
+    public AudioClip maryAttack1VL;
     public AudioClip maryMove2SFX;
+    public AudioClip maryAttack2VL;
     public AudioClip maryMoveSpecialSFX;
+    public AudioClip maryMoveSpecialVL;
+    public AudioClip maryHurtVL;
 
     public bool isRage = false;
     public int countRageRounds = 0;
@@ -674,6 +687,9 @@ public class UI : MonoBehaviour
 
                 else
                 {
+                    maryButton.interactable = false;
+                    gabrielButton.interactable = false;
+                    floydButton.interactable = false;
                     floydButton.GetComponent<Image>().sprite = fAttack;
                     fScript.movesLeft--;
                     audioSource.clip = floydMove3SFX;
@@ -728,6 +744,8 @@ public class UI : MonoBehaviour
         specialErrorText.text = " ";
         moveErrorText.text = " ";
         potionErrorText.text = " ";
+
+
         
 
         if(enemy1Scr.currentHealth <= 0)
@@ -1166,12 +1184,24 @@ public class UI : MonoBehaviour
             if (sceneName == "ShaniahScene")
             {
                 SceneManager.LoadScene("LevelTwo");
+                moves.gameObject.SetActive(false);
+                items.gameObject.SetActive(false);
+                special.gameObject.SetActive(false);
+                selection.gameObject.SetActive(false);
             }
             if (sceneName == "LevelTwo")
             {
                 SceneManager.LoadScene("LevelThree");
+                moves.gameObject.SetActive(false);
+                items.gameObject.SetActive(false);
+                special.gameObject.SetActive(false);
+                selection.gameObject.SetActive(false);
             }
         }
+        moves.gameObject.SetActive(false);
+        items.gameObject.SetActive(false);
+        special.gameObject.SetActive(false);
+        selection.gameObject.SetActive(false);
     }
 
     
