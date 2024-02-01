@@ -108,7 +108,11 @@ public class UI : MonoBehaviour
     public AudioClip maryMoveSpecialSFX;
     public AudioClip maryMoveSpecialVL;
     public AudioClip maryHurtVL;
-
+    // coroutine
+    IEnumerator playVLandWait()
+    {
+        yield return new WaitForSeconds(1.3f);
+    }
     public bool isRage = false;
     public int countRageRounds = 0;
 
@@ -612,6 +616,9 @@ public class UI : MonoBehaviour
                 {
                     floydButton.GetComponent<Image>().sprite = fAttack;
                     fScript.movesLeft--;
+                    audioSource.clip = floydAttack2VL;
+                    audioSource.Play();
+                    StartCoroutine(playVLandWait());
                     audioSource.clip = floydMove2SFX;
                     audioSource.Play();
 
