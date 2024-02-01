@@ -13,7 +13,7 @@ public class TempDialogue : MonoBehaviour
     public string four = "I'd rather not, the lighting isn't great here.";
     public string five = "A podcast doesn't need lighting.";
     public string six = "Oh yeah, anyway, let's get out of here. Where even are we?";
-    public string seven = "I believe we're in the afterlife, we should leave. This place sucks, we should find a Better Place *wink";
+    public string seven = "I believe we're in the afterlife, we should leave. This place sucks, we should find a Better Place!";
 
     public AudioClip oneClip;
     public AudioClip twoClip;
