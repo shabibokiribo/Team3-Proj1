@@ -2321,7 +2321,7 @@ MonoBehaviour:
   five: A podcast doesn't need lighting.
   six: Oh yeah, anyway, let's get out of here. Where even are we?
   seven: I believe we're in the afterlife, we should leave. This place sucks, we
-    should find a Better Place *wink
+    should find a Better Place
   oneClip: {fileID: 8300000, guid: e01ff66900776fd47a816ffc4c429500, type: 3}
   twoClip: {fileID: 8300000, guid: 2a1e1bf37391d0d478b67fd607b0441f, type: 3}
   threeClip: {fileID: 8300000, guid: 6e81d17d7f278c344939bae69f17c6d2, type: 3}
