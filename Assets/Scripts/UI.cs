@@ -111,7 +111,13 @@ public class UI : MonoBehaviour
     // coroutine
     IEnumerator playVLandWait()
     {
+        Debug.Log("waiting...");
         yield return new WaitForSeconds(1.3f);
+        Debug.Log("Done waiting");
+    }
+    IEnumerator wait()
+    {
+        yield return StartCoroutine(playVLandWait());
     }
     public bool isRage = false;
     public int countRageRounds = 0;
@@ -398,8 +404,9 @@ public class UI : MonoBehaviour
                 else
                 {
                     floydButton.GetComponent<Image>().sprite = fSpecial;
-                    audioSource.clip = floydMoveSpecialSFX;
+                    audioSource.clip = floydMoveSpecialVL;
                     audioSource.Play();
+                    Invoke("PlayMoveSpecialSFX", 1.3f); // invokes the regular sound effect after a delay
                     fScript.movesLeft--;
                     maryButton.interactable = true;
                     gabrielButton.interactable = true;
@@ -429,7 +436,9 @@ public class UI : MonoBehaviour
                 else
                 {
                     gabrielButton.GetComponent<Image>().sprite = gSpecial;
-                    audioSource.PlayOneShot(gabrielMoveSpecialSFX);
+                    audioSource.clip = gabrielMoveSpecialVL;
+                    audioSource.Play();
+                    Invoke("PlayMoveSpecialSFX", 1.3f); // invokes the regular sound effect after a delay
                     gScript.movesLeft--;
                     maryButton.interactable = true;
                     floydButton.interactable = true;
@@ -471,6 +480,9 @@ public class UI : MonoBehaviour
                     maryButton.interactable = true;
                     gabrielButton.interactable = true;
                     isRage = true;
+                    audioSource.clip = maryMoveSpecialVL;
+                    audioSource.Play();
+                    Invoke("PlayMoveSpecialSFX", 1.3f); // invokes the regular sound effect after a delay
                 }
                 
 
@@ -506,6 +518,9 @@ public class UI : MonoBehaviour
                 fScript.movesLeft--;
                 maryButton.interactable = true;
                 gabrielButton.interactable = true;
+                audioSource.clip = floydAttack1VL;
+                audioSource.Play();
+                StartCoroutine(wait());
                 audioSource.clip = floydMove1SFX;
                 audioSource.Play();
                 
@@ -529,6 +544,9 @@ public class UI : MonoBehaviour
                 gScript.movesLeft--;
                 maryButton.interactable = true;
                 floydButton.interactable = true;
+                audioSource.clip = gabrielAttack1VL;
+                audioSource.Play();
+                StartCoroutine(wait());
                 audioSource.clip = gabrielMove1SFX;
                 audioSource.Play();
 
@@ -618,9 +636,7 @@ public class UI : MonoBehaviour
                     fScript.movesLeft--;
                     audioSource.clip = floydAttack2VL;
                     audioSource.Play();
-                    StartCoroutine(playVLandWait());
-                    audioSource.clip = floydMove2SFX;
-                    audioSource.Play();
+                    Invoke("PlayMove2SFX", 1.3f); // invokes the regular sound effect after a delay
 
                     floydButton.interactable = true;
                     gabrielButton.interactable = true;
@@ -662,8 +678,9 @@ public class UI : MonoBehaviour
 
 
                     gScript.GainMana(-10);
-                    audioSource.clip = gabrielMove2SFX;
+                    audioSource.clip = gabrielAttack2VL;
                     audioSource.Play();
+                    Invoke("PlayMove2SFX", 1.3f); // invokes the regular sound effect after a delay
 
                     if (selectedEnemy == "Enemy1")
                     {
@@ -688,8 +705,9 @@ public class UI : MonoBehaviour
                 //take hp from all enemies on board (-15)
                 floydButton.interactable = true;
                 gabrielButton.interactable = true;
-                audioSource.clip = maryMove2SFX;
+                audioSource.clip = maryAttack2VL;
                 audioSource.Play();
+                Invoke("PlayMove2SFX", 1.3f); // invokes the regular sound effect after a delay
 
                 enemy1Scr.TakeDamage(15);
                 enemy2Scr.TakeDamage(15);
@@ -719,8 +737,9 @@ public class UI : MonoBehaviour
                     floydButton.interactable = false;
                     floydButton.GetComponent<Image>().sprite = fAttack;
                     fScript.movesLeft--;
-                    audioSource.clip = floydMove3SFX;
+                    audioSource.clip = floydAttack3VL;
                     audioSource.Play();
+                    Invoke("PlayMove3SFX", 1.3f); // invokes the regular sound effect after a delay
                     if (selectedEnemy == "Enemy1")
                     {
                         enemy1Scr.TakeDamage(15);
@@ -1238,6 +1257,83 @@ public class UI : MonoBehaviour
         enemy1Scr.isChecked = false;
         enemy2Scr.isChecked = false;
         enemy3Scr.isChecked = false;
+    }
+    // coroutines amiright??? >,D
+    void PlayMove1SFX()
+    {
+        switch (activeChar)
+        {
+            case "Floyd":
+                audioSource.clip = floydMove1SFX;
+                audioSource.Play();
+                break;
+            case "Gabriel":
+                audioSource.clip = gabrielMove1SFX;
+                audioSource.Play();
+                break;
+            case "Mary":
+                audioSource.clip = maryMove1SFX;
+                audioSource.Play();
+                break;
+            default:
+                break;
+        }
+    }
+    void PlayMove2SFX()
+    {
+        switch (activeChar)
+        {
+            case "Floyd":
+                audioSource.clip = floydMove2SFX;
+                audioSource.Play();
+                break;
+            case "Gabriel":
+                audioSource.clip = gabrielMove2SFX;
+                audioSource.Play();
+                break;
+            case "Mary":
+                audioSource.clip = maryMove2SFX;
+                audioSource.Play();
+                break;
+            default:
+                break;
+        }
+    }
+    void PlayMove3SFX()
+    {
+        switch (activeChar)
+        {
+            case "Floyd":
+                audioSource.clip = floydMove3SFX;
+                audioSource.Play();
+                break;
+            case "Gabriel":
+                break;
+            case "Mary":
+                break;
+            default:
+                break;
+        }
+    }
+    void PlayMove1SpecialSFX()
+    {
+        switch (activeChar)
+        {
+            case "Floyd":
+                audioSource.clip = floydMoveSpecialSFX;
+                audioSource.Play();
+                break;
+            case "Gabriel":
+                audioSource.clip = gabrielMoveSpecialSFX;
+                audioSource.Play();
+                break;
+            case "Mary":
+                audioSource.clip = maryMoveSpecialSFX;
+                audioSource.Play();
+                break;
+            default:
+                break;
+        }
     }
 
     public void OnClickPotion()
