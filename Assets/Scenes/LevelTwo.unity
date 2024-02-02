@@ -1121,7 +1121,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 493682175}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: OnClickEnemy3
         m_Mode: 1
@@ -9132,7 +9132,7 @@ MonoBehaviour:
   hulaDancer: {fileID: 21300000, guid: bb32ff49f91198b429073c155d7d2e9e, type: 3}
   tree: {fileID: 21300000, guid: e114adad45a0b7f43867f05f17c7484c, type: 3}
   demon: {fileID: 21300000, guid: 3c732efe65acb4b42aa5f7aebff9ec0f, type: 3}
-  volcano: {fileID: 21300000, guid: 04ba4db6dbaa5084e9d5e1b59bcbd95e, type: 3}
+  volcano: {fileID: 21300000, guid: 4e71e539c68605341bf80745418ce114, type: 3}
   cerebus: {fileID: 21300000, guid: 96c12d94d9340be4fb235cb88aca4780, type: 3}
   beatBoss: 0
 --- !u!114 &1477838299
@@ -9179,7 +9179,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 493682175}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: OnClickEnemy1
         m_Mode: 1
@@ -10767,7 +10767,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 493682175}
         m_TargetAssemblyTypeName: UI, Assembly-CSharp
         m_MethodName: OnClickEnemy2
         m_Mode: 1
