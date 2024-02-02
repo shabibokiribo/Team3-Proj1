@@ -198,11 +198,12 @@ public class UI : MonoBehaviour
         {
             SceneManager.LoadScene("Lose");
         }
-
-        if(enemy1Scr.beatBoss == true)
+        if (sceneName == "LevelThree" && enemy1Scr.currentHealth <= 0 && enemy2Scr.currentHealth <= 0 && enemy3Scr.currentHealth <= 0  )
         {
             SceneManager.LoadScene("Win");
         }
+
+
 
         if (enemy1Scr.currentHealth > 0)
         {
@@ -482,7 +483,7 @@ public class UI : MonoBehaviour
                 else
                 {
                     mScript.movesLeft--;
-                    maryButton.interactable = true;
+                    floydButton.interactable = true;
                     gabrielButton.interactable = true;
                     isRage = true;
                     audioSource.clip = maryMoveSpecialVL;
