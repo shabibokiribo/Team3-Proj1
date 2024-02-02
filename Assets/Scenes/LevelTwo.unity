@@ -1221,7 +1221,7 @@ RectTransform:
   m_GameObject: {fileID: 144996051}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 5.6708155}
-  m_LocalScale: {x: 4.657982, y: 4.657982, z: 4.657982}
+  m_LocalScale: {x: 4.2463098, y: 4.2463098, z: 4.2463098}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 599623191}
@@ -9084,14 +9084,14 @@ RectTransform:
   m_GameObject: {fileID: 1477838296}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 5.6708155}
-  m_LocalScale: {x: 4.657982, y: 4.657982, z: 4.657982}
+  m_LocalScale: {x: 4.369839, y: 4.369839, z: 4.369839}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2122962070}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -74, y: -196}
+  m_AnchoredPosition: {x: -74, y: -462}
   m_SizeDelta: {x: 449.032, y: 449.032}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1477838298
@@ -9109,7 +9109,7 @@ MonoBehaviour:
   isAttacked: 0
   healthBar: {fileID: 649858328}
   manaBar: {fileID: 1801934947}
-  gm: {fileID: 0}
+  gm: {fileID: 493682175}
   move1: 
   move2: 
   special: 
@@ -9120,9 +9120,9 @@ MonoBehaviour:
   enemyName: 
   movesLeft: 1
   currentOpponent: 0
-  gScr: {fileID: 0}
-  mScr: {fileID: 0}
-  fScr: {fileID: 0}
+  gScr: {fileID: 136510267}
+  mScr: {fileID: 2052094897}
+  fScr: {fileID: 615488268}
   isChecked: 0
   enemy1Button: {fileID: 1477838299}
   enemy2Button: {fileID: 1755221712}
@@ -10065,9 +10065,9 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 519225339}
+  - {fileID: 2122962070}
   - {fileID: 599623191}
   - {fileID: 1697639186}
-  - {fileID: 2122962070}
   - {fileID: 642779349}
   - {fileID: 312797143}
   - {fileID: 1303784128}
@@ -10824,7 +10824,7 @@ MonoBehaviour:
   isAttacked: 0
   healthBar: {fileID: 1433030878}
   manaBar: {fileID: 205037331}
-  gm: {fileID: 0}
+  gm: {fileID: 493682175}
   move1: 
   move2: 
   special: 
@@ -10835,9 +10835,9 @@ MonoBehaviour:
   enemyName: 
   movesLeft: 1
   currentOpponent: 0
-  gScr: {fileID: 0}
-  mScr: {fileID: 0}
-  fScr: {fileID: 0}
+  gScr: {fileID: 136510267}
+  mScr: {fileID: 2052094897}
+  fScr: {fileID: 615488268}
   isChecked: 0
   enemy1Button: {fileID: 1477838299}
   enemy2Button: {fileID: 1755221712}
@@ -10867,7 +10867,7 @@ RectTransform:
   m_GameObject: {fileID: 1755221711}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 5.6708155}
-  m_LocalScale: {x: 4.657982, y: 4.657982, z: 4.657982}
+  m_LocalScale: {x: 4.2463098, y: 4.2463098, z: 4.2463098}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1697639186}
