@@ -257,8 +257,8 @@ public class Enemy : MonoBehaviour
                 if (gm.currentWave == 3)
                 {
                     enemy1Button.GetComponent<Image>().sprite = cerebus;
-                    enemy2Button.interactable = false;
-                    enemy3Button.interactable = false;
+                    enemy2Button.GetComponent<Image>().sprite = cerebus;
+                    enemy3Button.GetComponent<Image>().sprite = cerebus;
 
 
                     enemyName = "Cerberus";

@@ -209,7 +209,7 @@ public class UI : MonoBehaviour
         {
             SceneManager.LoadScene("Lose");
         }
-        if (sceneName == "LevelThree" && currentWave== 3 && enemy1Scr.currentHealth <= 0)
+        if (sceneName == "LevelThree" && currentWave== 3 && enemy1Scr.currentHealth <= 0 && enemy2Scr.currentHealth <= 0 && enemy2Scr.currentHealth <= 0)
         {
             SceneManager.LoadScene("Win");
         }
@@ -971,15 +971,15 @@ public class UI : MonoBehaviour
 
             if (enemy1Scr.enemyName == "Coconut Tree")
             {
-                enemy1Scr.EnemySpecial(30);
+                enemy1Scr.EnemySpecial(15);
             }
             if (enemy2Scr.enemyName == "Coconut Tree")
             {
-                enemy2Scr.EnemySpecial(30);
+                enemy2Scr.EnemySpecial(15);
             }
             if (enemy3Scr.enemyName == "Coconut Tree")
             {
-                enemy3Scr.EnemySpecial(30);
+                enemy3Scr.EnemySpecial(15);
             }
 
             //==================================
@@ -1087,15 +1087,15 @@ public class UI : MonoBehaviour
 
             if (enemy1Scr.enemyName == "Coconut Tree")
             {
-                enemy1Scr.EnemyMove1(15);
+                enemy1Scr.EnemyMove1(10);
             }
             if (enemy2Scr.enemyName == "Coconut Tree")
             {
-                enemy2Scr.EnemyMove1(15);
+                enemy2Scr.EnemyMove1(10);
             }
             if (enemy3Scr.enemyName == "Coconut Tree")
             {
-                enemy3Scr.EnemyMove1(15);
+                enemy3Scr.EnemyMove1(10);
             }
 
             //==================================
@@ -1190,15 +1190,15 @@ public class UI : MonoBehaviour
 
             if (enemy1Scr.enemyName == "Coconut Tree")
             {
-                enemy1Scr.EnemyMove2(20);
+                enemy1Scr.EnemyMove2(15);
             }
             if (enemy2Scr.enemyName == "Coconut Tree")
             {
-                enemy2Scr.EnemyMove2(20);
+                enemy2Scr.EnemyMove2(15);
             }
             if (enemy3Scr.enemyName == "Coconut Tree")
             {
-                enemy3Scr.EnemyMove2(20);
+                enemy3Scr.EnemyMove2(15);
             }
 
             //==================================
