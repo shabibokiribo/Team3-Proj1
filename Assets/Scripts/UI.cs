@@ -649,8 +649,8 @@ public class UI : MonoBehaviour
 
                     Debug.Log("Heal");
 
-                    mScript.TakeDamage(-10);
-                    gScript.TakeDamage(-5);
+                    mScript.TakeDamage(-20);
+                    gScript.TakeDamage(-20);
 
                     floydButton.interactable = true;
                     gabrielButton.interactable = true;
