@@ -58,6 +58,17 @@ public class UI : MonoBehaviour
 
     public TMP_Text roundText;
 
+
+    //Sprites
+    public Image originalE1;
+    public Image originalE2;
+    public Image originalE3;
+    public Sprite cherubSprite;
+    public Sprite angelSprite;
+    public Sprite hulaSprite;
+    public Sprite coconutSprite;
+    public Sprite barbSprite;
+    public Sprite cerberusSprite;
     //Sprites
     public Sprite gStanding;
     public Sprite gMove1;
@@ -248,8 +259,22 @@ public class UI : MonoBehaviour
             gScript.currentHealth = 100;
             fScript.currentHealth = 75;
             mScript.currentHealth = 130;
+            SwitchSprite(coconutSprite);
         }
 
+        if(currentWave == 2 && sceneName == "LevelOne")
+        {
+            SwitchSprite(angelSprite);
+        }
+        if(currentWave == 2 && sceneName == "LevelTwo")
+        {
+            SwitchSprite(coconutSprite);
+        }
+        if(currentWave == 2 && sceneName == "LevelThree")
+        {
+            SwitchSprite(cerberusSprite);
+        }
+        
     }
 
     
@@ -262,6 +287,7 @@ public class UI : MonoBehaviour
         audioSource.clip = selectSFX;
         audioSource.Play();
         selectedEnemy = "Enemy1";
+
     }
 
     public void OnClickEnemy2()
@@ -1400,5 +1426,12 @@ public class UI : MonoBehaviour
             }
         }
         //Invoke("TurnReset", .5f);
+    }
+
+    public void SwitchSprite(Sprite sprite)
+    {
+        originalE1.sprite = sprite;
+        originalE2.sprite = sprite;
+        originalE3.sprite = sprite;
     }
 }
