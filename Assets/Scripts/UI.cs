@@ -108,6 +108,11 @@ public class UI : MonoBehaviour
     public AudioClip maryMoveSpecialSFX;
     public AudioClip maryMoveSpecialVL;
     public AudioClip maryHurtVL;
+
+    //Animations
+    public Animations animation; //reference to animation script
+    Animator myAnimator;
+
     // coroutine
     IEnumerator playVLandWait()
     {
