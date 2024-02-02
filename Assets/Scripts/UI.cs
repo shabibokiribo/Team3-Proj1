@@ -209,11 +209,12 @@ public class UI : MonoBehaviour
         {
             SceneManager.LoadScene("Lose");
         }
-
-        if(enemy1Scr.beatBoss == true)
+        if (sceneName == "LevelThree" && currentWave== 3 && enemy1Scr.currentHealth <= 0)
         {
             SceneManager.LoadScene("Win");
         }
+
+
 
         if (enemy1Scr.currentHealth > 0)
         {
@@ -250,6 +251,10 @@ public class UI : MonoBehaviour
             if (sceneName == "LevelTwo")
             {
                 SceneManager.LoadScene("LevelThree");
+            }
+            if (sceneName == "LevelThree")
+            {
+                SceneManager.LoadScene("Win");
             }
 
         }
@@ -508,7 +513,7 @@ public class UI : MonoBehaviour
                 else
                 {
                     mScript.movesLeft--;
-                    maryButton.interactable = true;
+                    floydButton.interactable = true;
                     gabrielButton.interactable = true;
                     isRage = true;
                     audioSource.clip = maryMoveSpecialVL;
