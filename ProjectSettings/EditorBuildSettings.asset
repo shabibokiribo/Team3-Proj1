@@ -22,7 +22,7 @@ EditorBuildSettings:
     guid: d35bf300df224834f993c886f3b92dee
   - enabled: 0
     path: Assets/Scenes/LevelOne.unity
-    guid: b68ccd1ba436d61429fc97105b00ca62
+    guid: c4d2f50c407b0014a98f92a854d1b444
   - enabled: 1
     path: Assets/Scenes/ShaniahScene.unity
     guid: 1ad7cccfbd477f74cb0fe0823c128498
@@ -30,12 +30,12 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelTwo.unity
     guid: ea4cbc7123a4ff0438c2746396e09614
   - enabled: 1
-    path: Assets/Scenes/LevelThree.unity
-    guid: f95f81f37dc87894f970b4add8bfd4ca
-  - enabled: 1
     path: Assets/Scenes/Win.unity
     guid: 4ce0f4e0ab9a9e24eb5198d554655cb0
   - enabled: 1
     path: Assets/Scenes/Lose.unity
     guid: bcf0c118d8bfb8c4491785611985ae85
+  - enabled: 1
+    path: Assets/Scenes/LevelThree.unity
+    guid: 0717b286b96e68b44aae75143e08256f
   m_configObjects: {}
