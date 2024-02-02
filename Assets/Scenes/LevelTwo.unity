@@ -2778,6 +2778,15 @@ MonoBehaviour:
     m_Handle: 0
   sceneName: 
   roundText: {fileID: 1769931522}
+  originalE1: {fileID: 1477838300}
+  originalE2: {fileID: 1755221713}
+  originalE3: {fileID: 144996053}
+  cherubSprite: {fileID: 21300000, guid: 37fafe1443cbad74a891c3961de71fe6, type: 3}
+  angelSprite: {fileID: 21300000, guid: 20bf1fcc627659848a64065b1a538812, type: 3}
+  hulaSprite: {fileID: 21300000, guid: bb32ff49f91198b429073c155d7d2e9e, type: 3}
+  coconutSprite: {fileID: 21300000, guid: e114adad45a0b7f43867f05f17c7484c, type: 3}
+  barbSprite: {fileID: 21300000, guid: 9e3fed1737821294b85b0330055d4165, type: 3}
+  cerberusSprite: {fileID: 21300000, guid: 37fafe1443cbad74a891c3961de71fe6, type: 3}
   gStanding: {fileID: 21300000, guid: b8a2cad395c576d449c9d2d89f2ee985, type: 3}
   gMove1: {fileID: 21300000, guid: f3c13deb8bb1447458c5a12791f83295, type: 3}
   gMove2: {fileID: 21300000, guid: efe542d808479fb4c96400ab3e35164d, type: 3}
@@ -2817,6 +2826,7 @@ MonoBehaviour:
   maryMoveSpecialSFX: {fileID: 8300000, guid: 65a4a70042276d34f8116c29f945d47f, type: 3}
   maryMoveSpecialVL: {fileID: 0}
   maryHurtVL: {fileID: 0}
+  animation: {fileID: 0}
   isRage: 0
   countRageRounds: 0
   specialDescription: {fileID: 193844398}
