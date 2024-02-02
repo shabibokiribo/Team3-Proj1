@@ -1202,7 +1202,7 @@ MonoBehaviour:
   tree: {fileID: 21300000, guid: e114adad45a0b7f43867f05f17c7484c, type: 3}
   demon: {fileID: 21300000, guid: 3c732efe65acb4b42aa5f7aebff9ec0f, type: 3}
   volcano: {fileID: 21300000, guid: 4e71e539c68605341bf80745418ce114, type: 3}
-  cerebus: {fileID: 21300000, guid: 96c12d94d9340be4fb235cb88aca4780, type: 3}
+  cerebus: {fileID: 21300000, guid: c84e3648bcdbcfc409bde394f494478a, type: 3}
   beatBoss: 0
 --- !u!222 &144996055
 CanvasRenderer:
@@ -2817,6 +2817,7 @@ MonoBehaviour:
   maryMoveSpecialSFX: {fileID: 8300000, guid: 65a4a70042276d34f8116c29f945d47f, type: 3}
   maryMoveSpecialVL: {fileID: 0}
   maryHurtVL: {fileID: 0}
+  animation: {fileID: 0}
   isRage: 0
   countRageRounds: 0
   specialDescription: {fileID: 193844398}
@@ -9133,7 +9134,7 @@ MonoBehaviour:
   tree: {fileID: 21300000, guid: e114adad45a0b7f43867f05f17c7484c, type: 3}
   demon: {fileID: 21300000, guid: 3c732efe65acb4b42aa5f7aebff9ec0f, type: 3}
   volcano: {fileID: 21300000, guid: 4e71e539c68605341bf80745418ce114, type: 3}
-  cerebus: {fileID: 21300000, guid: 96c12d94d9340be4fb235cb88aca4780, type: 3}
+  cerebus: {fileID: 21300000, guid: c84e3648bcdbcfc409bde394f494478a, type: 3}
   beatBoss: 0
 --- !u!114 &1477838299
 MonoBehaviour:
@@ -10848,7 +10849,7 @@ MonoBehaviour:
   tree: {fileID: 21300000, guid: e114adad45a0b7f43867f05f17c7484c, type: 3}
   demon: {fileID: 21300000, guid: 3c732efe65acb4b42aa5f7aebff9ec0f, type: 3}
   volcano: {fileID: 21300000, guid: 4e71e539c68605341bf80745418ce114, type: 3}
-  cerebus: {fileID: 21300000, guid: 96c12d94d9340be4fb235cb88aca4780, type: 3}
+  cerebus: {fileID: 21300000, guid: c84e3648bcdbcfc409bde394f494478a, type: 3}
   beatBoss: 0
 --- !u!222 &1755221715
 CanvasRenderer:
