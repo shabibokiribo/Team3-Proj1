@@ -198,7 +198,7 @@ public class UI : MonoBehaviour
         {
             SceneManager.LoadScene("Lose");
         }
-        if (sceneName == "LevelThree" && enemy1Scr.currentHealth <= 0 && enemy2Scr.currentHealth <= 0 && enemy3Scr.currentHealth <= 0  )
+        if (sceneName == "LevelThree" && currentWave== 3 && enemy1Scr.currentHealth <= 0)
         {
             SceneManager.LoadScene("Win");
         }
@@ -240,6 +240,10 @@ public class UI : MonoBehaviour
             if (sceneName == "LevelTwo")
             {
                 SceneManager.LoadScene("LevelThree");
+            }
+            if (sceneName == "LevelThree")
+            {
+                SceneManager.LoadScene("Win");
             }
 
         }
