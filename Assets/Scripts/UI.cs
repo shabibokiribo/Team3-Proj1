@@ -732,9 +732,9 @@ public class UI : MonoBehaviour
 
                 else
                 {
-                    maryButton.interactable = false;
-                    gabrielButton.interactable = false;
-                    floydButton.interactable = false;
+                    maryButton.interactable = true;
+                    gabrielButton.interactable = true;
+                    floydButton.interactable = true;
                     floydButton.GetComponent<Image>().sprite = fAttack;
                     fScript.movesLeft--;
                     audioSource.clip = floydAttack3VL;
